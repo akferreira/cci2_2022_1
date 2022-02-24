@@ -1,0 +1,32 @@
+irun(64): 15.20-s022: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s022: Started on Feb 09, 2022 at 22:19:02 -03
+irun
+	-f ../rtl/file_list.f
+		-smartorder
+		-work work
+		-top tb_z80
+		-notimingchecks
+		-gui
+		-access +rw
+		../../rtl/cpu_z80.v
+		../tb/tb_z80.v
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /tools/cadence/rhel5/INCISIVE_15.20.022/tools/inca/files/ncsimrc
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm tb_z80.uut.ADDR tb_z80.uut.ALU8FLAGS tb_z80.uut.ALU8OP tb_z80.uut.ALU8OUT tb_z80.uut.ALU16OP tb_z80.uut.ALU80 tb_z80.uut.ALU81 tb_z80.uut.ALU160 tb_z80.uut.ALU160_SEL tb_z80.uut.ALU161 tb_z80.uut.CLK tb_z80.uut.CPUStatus tb_z80.uut.DI tb_z80.uut.DINW_SEL tb_z80.uut.DO tb_z80.uut.DO_SEL tb_z80.uut.FETCH tb_z80.uut.FLAGS tb_z80.uut.FNMI tb_z80.uut.FlagMux tb_z80.uut.HALT tb_z80.uut.INT tb_z80.uut.IORQ tb_z80.uut.M1 tb_z80.uut.MREQ tb_z80.uut.NMI tb_z80.uut.REG_RSEL tb_z80.uut.REG_WSEL tb_z80.uut.RESET tb_z80.uut.SINT tb_z80.uut.SNMI tb_z80.uut.SRESET tb_z80.uut.STAGE tb_z80.uut.WAIT tb_z80.uut.WE tb_z80.uut.WR tb_z80.uut.fetch98 tb_z80.uut.intop tb_z80.uut.next_stage tb_z80.uut.op0mem tb_z80.uut.op1mem tb_z80.uut.op16 tb_z80.uut.opd tb_z80.uut.status tb_z80.uut.tzf tb_z80.uut.xmask
+Created probe 1
+ncsim> run 100ns
+Ran until 100 NS + 0
+ncsim> ^C
+ncsim> ^C
+ncsim> ^C
+ncsim> ^C
+ncsim> ^C
+ncsim> ^C
+ncsim> ^C
+ncsim> ^C
+ncsim> TOOL:	irun(64)	15.20-s022: Exiting on Feb 24, 2022 at 14:32:27 -03  (total: 352:13:25)
