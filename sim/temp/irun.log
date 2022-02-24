@@ -21,4 +21,12 @@ ncsim> probe -create -shm tb_z80.uut.ADDR tb_z80.uut.ALU8FLAGS tb_z80.uut.ALU8OP
 Created probe 1
 ncsim> run 100ns
 Ran until 100 NS + 0
-ncsim> 
+ncsim> ^C
+ncsim> ^C
+ncsim> ^C
+ncsim> ^C
+ncsim> ^C
+ncsim> ^C
+ncsim> ^C
+ncsim> ^C
+ncsim> TOOL:	irun(64)	15.20-s022: Exiting on Feb 24, 2022 at 14:32:27 -03  (total: 352:13:25)

@@ -1,5 +1,5 @@
 irun(64): 15.20-s022: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s022: Started on Feb 09, 2022 at 21:37:16 -03
+TOOL:	irun(64)	15.20-s022: Started on Feb 24, 2022 at 15:39:45 -03
 irun
 	-f ../rtl/file_list.f
 		-smartorder
@@ -10,6 +10,44 @@ irun
 		-access +rw
 		../../rtl/cpu_z80.v
 		../tb/tb_z80.v
-ncelab: *E,NOUNIT: Unable to find a unit named 'tb_z80' in the libraries.
-irun: *E,ELBERR: Error during elaboration (status 1), exiting.
-TOOL:	irun(64)	15.20-s022: Exiting on Feb 09, 2022 at 21:37:16 -03  (total: 00:00:00)
+Recompiling... reason: file './tb_z80.v' is newer than expected.
+	expected: Sat Nov 20 02:50:03 2021
+	actual:   Sat Nov 20 02:54:08 2021
+file: ../tb/tb_z80.v
+	module work.tb_z80:v
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'work' ....... Done
+	Top level design units:
+		tb_z80
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		work.tb_z80:v <0x1b5869bc>
+			streams:   8, words:  3311
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                10       8
+		Registers:              58      56
+		Scalar wires:           32       -
+		Expanded wires:         41       6
+		Vectored wires:         38       -
+		Always blocks:          12      10
+		Initial blocks:         10      10
+		Cont. assignments:      19      28
+		Pseudo assignments:     29      29
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: work.tb_z80:v
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /tools/cadence/rhel5/INCISIVE_15.20.022/tools/inca/files/ncsimrc
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm tb_z80.DO tb_z80.DI tb_z80.mem1 tb_z80.count tb_z80.CLK tb_z80.ADDR
+Created probe 1
+ncsim> run 100ns
+Ran until 100 NS + 0
+ncsim> TOOL:	irun(64)	15.20-s022: Exiting on Feb 24, 2022 at 16:28:19 -03  (total: 00:48:34)
