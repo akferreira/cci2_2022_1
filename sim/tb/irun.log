@@ -1,0 +1,15 @@
+irun(64): 15.20-s022: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s022: Started on Feb 09, 2022 at 21:37:16 -03
+irun
+	-f ../rtl/file_list.f
+		-smartorder
+		-work work
+		-top tb_z80
+		-notimingchecks
+		-gui
+		-access +rw
+		../../rtl/cpu_z80.v
+		../tb/tb_z80.v
+ncelab: *E,NOUNIT: Unable to find a unit named 'tb_z80' in the libraries.
+irun: *E,ELBERR: Error during elaboration (status 1), exiting.
+TOOL:	irun(64)	15.20-s022: Exiting on Feb 09, 2022 at 21:37:16 -03  (total: 00:00:00)

@@ -1,0 +1,6 @@
+*.rpt
+synthesis/logs_*
+synthesis/outputs_*
+synthesis/reports_*
+genus.cmd*
+genus.log*
