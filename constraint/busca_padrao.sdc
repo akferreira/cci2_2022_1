@@ -24,7 +24,7 @@ set_input_transition -min -fall 0.130 [all_inputs]
 set_input_transition -max -fall 0.135 [all_inputs]
 
 ## OUTPUTS
-set_output_delay -clock CLK -min 0.2 [all_outputs]
+set_output_delay -clock CLK -min 0.5 [all_outputs]
 set_load -min 0.1 [all_outputs]
 set_load -max 0.33 [all_outputs]
 set_max_fanout 16

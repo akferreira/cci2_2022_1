@@ -155,7 +155,7 @@
     "design":"cpu_z80" 
   },
   "snapshots": [
-    { "name": "elaborate", "uuid": "3b06ad87", "path": "elaborate", "branch": "default", "key": "3b06ad87", "parent_key": "", "metrics": [
+    { "name": "elaborate", "uuid": "3b1caee1", "path": "elaborate", "branch": "default", "key": "3b1caee1", "parent_key": "", "metrics": [
         { "name": "alerts", "value": "" }, 
         { "name": "design.area", "value": "162862.502294" }, 
         { "name": "design.area.block", "value": "0" }, 
@@ -180,13 +180,13 @@
         { "name": "design.name", "value": "cpu_z80" }, 
         { "name": "design.nets.global", "value": "0" }, 
         { "name": "design.nets.signal", "value": "8086" }, 
-        { "name": "flow.cputime", "value": "29" }, 
-        { "name": "flow.cputime.total", "value": "29" }, 
-        { "name": "flow.cputime.user", "value": "29" }, 
-        { "name": "flow.cputime.user.total", "value": "29" }, 
-        { "name": "flow.log", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis/genus.log11" }, 
+        { "name": "flow.cputime", "value": "30" }, 
+        { "name": "flow.cputime.total", "value": "30" }, 
+        { "name": "flow.cputime.user", "value": "30" }, 
+        { "name": "flow.cputime.user.total", "value": "30" }, 
+        { "name": "flow.log", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis/genus.log16" }, 
         { "name": "flow.machine", "value": "pgmicro01.ufrgs.br" }, 
-        { "name": "flow.machine.load", "value": "1.47" }, 
+        { "name": "flow.machine.load", "value": "0.88" }, 
         { "name": "flow.memory", "value": "296 MB" }, 
         { "name": "flow.memory.resident", "value": "296 MB" }, 
         { "name": "flow.realtime", "value": "31" }, 
@@ -204,9 +204,9 @@
         { "name": "timing.setup.analysis_views.active.number", "value": "0" }, 
         { "name": "timing.setup.analysis_views.enabled", "value": "" }, 
         { "name": "timing.setup.analysis_views.enabled.number", "value": "0" }
-      ], "total_cpu": 29, "total_cpu_user": 29, "total_real": 31, "delta_cpu_not_child": 29, "delta_cpu_user_not_child": 29, "delta_cpu": 29, "delta_cpu_user": 29, "delta_real": 31, "real_start": 1644445453, "real_end": 1644445484 }, 
-    { "name": "syn_generic", "uuid": "3b06adb1", "path": "syn_generic", "branch": "default", "key": "3b06adb1", "parent_key": "", "previous": [
-        "3b06ad87"
+      ], "total_cpu": 30, "total_cpu_user": 30, "total_real": 31, "delta_cpu_not_child": 30, "delta_cpu_user_not_child": 30, "delta_cpu": 30, "delta_cpu_user": 30, "delta_real": 31, "real_start": 1646170701, "real_end": 1646170732 }, 
+    { "name": "syn_generic", "uuid": "3b1caed7", "path": "syn_generic", "branch": "default", "key": "3b1caed7", "parent_key": "", "previous": [
+        "3b1caee1"
       ], "metrics": [
         { "name": "alerts", "value": "design.area.buffer {Buffer area increased by over 20%}" }, 
         { "name": "design.area", "value": "100140.224454" }, 
@@ -232,13 +232,13 @@
         { "name": "design.name", "value": "cpu_z80" }, 
         { "name": "design.nets.global", "value": "0" }, 
         { "name": "design.nets.signal", "value": "4649" }, 
-        { "name": "flow.cputime", "value": "17" }, 
-        { "name": "flow.cputime.total", "value": "46" }, 
-        { "name": "flow.cputime.user", "value": "17" }, 
-        { "name": "flow.cputime.user.total", "value": "46" }, 
-        { "name": "flow.log", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis/genus.log11" }, 
+        { "name": "flow.cputime", "value": "15" }, 
+        { "name": "flow.cputime.total", "value": "45" }, 
+        { "name": "flow.cputime.user", "value": "15" }, 
+        { "name": "flow.cputime.user.total", "value": "45" }, 
+        { "name": "flow.log", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis/genus.log16" }, 
         { "name": "flow.machine", "value": "pgmicro01.ufrgs.br" }, 
-        { "name": "flow.machine.load", "value": "1.36" }, 
+        { "name": "flow.machine.load", "value": "0.91" }, 
         { "name": "flow.memory", "value": "297 MB" }, 
         { "name": "flow.memory.resident", "value": "297 MB" }, 
         { "name": "flow.realtime", "value": "17" }, 
@@ -256,9 +256,9 @@
         { "name": "timing.setup.analysis_views.active.number", "value": "1" }, 
         { "name": "timing.setup.analysis_views.enabled", "value": " default_emulate_view" }, 
         { "name": "timing.setup.analysis_views.enabled.number", "value": "1" }
-      ], "total_cpu": 46, "total_cpu_user": 46, "total_real": 48, "delta_cpu_not_child": 17, "delta_cpu_user_not_child": 17, "delta_cpu": 17, "delta_cpu_user": 17, "delta_real": 17, "real_start": 1644445484, "real_end": 1644445501 }, 
-    { "name": "syn_map", "uuid": "3b06addc", "path": "syn_map", "branch": "default", "key": "3b06addc", "parent_key": "", "previous": [
-        "3b06adb1"
+      ], "total_cpu": 45, "total_cpu_user": 45, "total_real": 48, "delta_cpu_not_child": 15, "delta_cpu_user_not_child": 15, "delta_cpu": 15, "delta_cpu_user": 15, "delta_real": 17, "real_start": 1646170732, "real_end": 1646170749 }, 
+    { "name": "syn_map", "uuid": "3b1cae3a", "path": "syn_map", "branch": "default", "key": "3b1cae3a", "parent_key": "", "previous": [
+        "3b1caed7"
       ], "metrics": [
         { "name": "alerts", "value": "design.area.buffer {Buffer area increased by over 20%}" }, 
         { "name": "design.area", "value": "90916.45658" }, 
@@ -284,17 +284,17 @@
         { "name": "design.name", "value": "cpu_z80" }, 
         { "name": "design.nets.global", "value": "0" }, 
         { "name": "design.nets.signal", "value": "2824" }, 
-        { "name": "flow.cputime", "value": "155" }, 
-        { "name": "flow.cputime.total", "value": "201" }, 
-        { "name": "flow.cputime.user", "value": "155" }, 
-        { "name": "flow.cputime.user.total", "value": "201" }, 
-        { "name": "flow.log", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis/genus.log11" }, 
+        { "name": "flow.cputime", "value": "151" }, 
+        { "name": "flow.cputime.total", "value": "196" }, 
+        { "name": "flow.cputime.user", "value": "151" }, 
+        { "name": "flow.cputime.user.total", "value": "196" }, 
+        { "name": "flow.log", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis/genus.log16" }, 
         { "name": "flow.machine", "value": "pgmicro01.ufrgs.br" }, 
-        { "name": "flow.machine.load", "value": "1.89" }, 
+        { "name": "flow.machine.load", "value": "2.17" }, 
         { "name": "flow.memory", "value": "316 MB" }, 
         { "name": "flow.memory.resident", "value": "316 MB" }, 
-        { "name": "flow.realtime", "value": "101" }, 
-        { "name": "flow.realtime.total", "value": "149" }, 
+        { "name": "flow.realtime", "value": "98" }, 
+        { "name": "flow.realtime.total", "value": "146" }, 
         { "name": "flow.run_directory", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis" }, 
         { "name": "flow.tool.name", "value": "Genus(TM) Synthesis Solution" }, 
         { "name": "flow.tool.name.short", "value": "genus" }, 
@@ -325,9 +325,9 @@
         { "name": "timing.setup.wns.I2O", "value": "no_value ps" }, 
         { "name": "timing.setup.wns.cg_enable_group_CLK", "value": "0.0 ps" }, 
         { "name": "timing.setup.wns.default", "value": "no_value ps" }
-      ], "total_cpu": 201, "total_cpu_user": 201, "total_real": 149, "delta_cpu_not_child": 155, "delta_cpu_user_not_child": 155, "delta_cpu": 155, "delta_cpu_user": 155, "delta_real": 101, "real_start": 1644445501, "real_end": 1644445602 }, 
-    { "name": "syn_opt", "uuid": "3b06ad37", "path": "syn_opt", "branch": "default", "key": "3b06ad37", "parent_key": "", "previous": [
-        "3b06addc"
+      ], "total_cpu": 196, "total_cpu_user": 196, "total_real": 146, "delta_cpu_not_child": 151, "delta_cpu_user_not_child": 151, "delta_cpu": 151, "delta_cpu_user": 151, "delta_real": 98, "real_start": 1646170749, "real_end": 1646170847 }, 
+    { "name": "syn_opt", "uuid": "3b1cae5e", "path": "syn_opt", "branch": "default", "key": "3b1cae5e", "parent_key": "", "previous": [
+        "3b1cae3a"
       ], "metrics": [
         { "name": "alerts", "value": "" }, 
         { "name": "design.area", "value": "88545.364519" }, 
@@ -354,16 +354,16 @@
         { "name": "design.nets.global", "value": "0" }, 
         { "name": "design.nets.signal", "value": "2727" }, 
         { "name": "flow.cputime", "value": "14" }, 
-        { "name": "flow.cputime.total", "value": "215" }, 
+        { "name": "flow.cputime.total", "value": "210" }, 
         { "name": "flow.cputime.user", "value": "14" }, 
-        { "name": "flow.cputime.user.total", "value": "215" }, 
-        { "name": "flow.log", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis/genus.log11" }, 
+        { "name": "flow.cputime.user.total", "value": "210" }, 
+        { "name": "flow.log", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis/genus.log16" }, 
         { "name": "flow.machine", "value": "pgmicro01.ufrgs.br" }, 
-        { "name": "flow.machine.load", "value": "1.92" }, 
+        { "name": "flow.machine.load", "value": "1.91" }, 
         { "name": "flow.memory", "value": "314 MB" }, 
         { "name": "flow.memory.resident", "value": "314 MB" }, 
-        { "name": "flow.realtime", "value": "19" }, 
-        { "name": "flow.realtime.total", "value": "168" }, 
+        { "name": "flow.realtime", "value": "18" }, 
+        { "name": "flow.realtime.total", "value": "164" }, 
         { "name": "flow.run_directory", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis" }, 
         { "name": "flow.tool.name", "value": "Genus(TM) Synthesis Solution" }, 
         { "name": "flow.tool.name.short", "value": "genus" }, 
@@ -394,9 +394,9 @@
         { "name": "timing.setup.wns.I2O", "value": "no_value ps" }, 
         { "name": "timing.setup.wns.cg_enable_group_CLK", "value": "0.0 ps" }, 
         { "name": "timing.setup.wns.default", "value": "no_value ps" }
-      ], "total_cpu": 215, "total_cpu_user": 215, "total_real": 168, "delta_cpu_not_child": 14, "delta_cpu_user_not_child": 14, "delta_cpu": 14, "delta_cpu_user": 14, "delta_real": 19, "real_start": 1644445602, "real_end": 1644445621 }, 
-    { "name": "syn_opt_2", "uuid": "3b06ad20", "path": "syn_opt_2", "branch": "default", "key": "3b06ad20", "parent_key": "", "previous": [
-        "3b06ad37"
+      ], "total_cpu": 210, "total_cpu_user": 210, "total_real": 164, "delta_cpu_not_child": 14, "delta_cpu_user_not_child": 14, "delta_cpu": 14, "delta_cpu_user": 14, "delta_real": 18, "real_start": 1646170847, "real_end": 1646170865 }, 
+    { "name": "syn_opt_2", "uuid": "3b1cae42", "path": "syn_opt_2", "branch": "default", "key": "3b1cae42", "parent_key": "", "previous": [
+        "3b1cae5e"
       ], "metrics": [
         { "name": "alerts", "value": "" }, 
         { "name": "design.area", "value": "88539.215719" }, 
@@ -422,17 +422,17 @@
         { "name": "design.name", "value": "cpu_z80" }, 
         { "name": "design.nets.global", "value": "0" }, 
         { "name": "design.nets.signal", "value": "2727" }, 
-        { "name": "flow.cputime", "value": "3" }, 
-        { "name": "flow.cputime.total", "value": "218" }, 
-        { "name": "flow.cputime.user", "value": "3" }, 
-        { "name": "flow.cputime.user.total", "value": "218" }, 
-        { "name": "flow.log", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis/genus.log11" }, 
+        { "name": "flow.cputime", "value": "2" }, 
+        { "name": "flow.cputime.total", "value": "212" }, 
+        { "name": "flow.cputime.user", "value": "2" }, 
+        { "name": "flow.cputime.user.total", "value": "212" }, 
+        { "name": "flow.log", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis/genus.log16" }, 
         { "name": "flow.machine", "value": "pgmicro01.ufrgs.br" }, 
-        { "name": "flow.machine.load", "value": "2.16" }, 
+        { "name": "flow.machine.load", "value": "1.78" }, 
         { "name": "flow.memory", "value": "314 MB" }, 
         { "name": "flow.memory.resident", "value": "314 MB" }, 
         { "name": "flow.realtime", "value": "8" }, 
-        { "name": "flow.realtime.total", "value": "176" }, 
+        { "name": "flow.realtime.total", "value": "172" }, 
         { "name": "flow.run_directory", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis" }, 
         { "name": "flow.tool.name", "value": "Genus(TM) Synthesis Solution" }, 
         { "name": "flow.tool.name.short", "value": "genus" }, 
@@ -463,7 +463,7 @@
         { "name": "timing.setup.wns.I2O", "value": "no_value ps" }, 
         { "name": "timing.setup.wns.cg_enable_group_CLK", "value": "0.0 ps" }, 
         { "name": "timing.setup.wns.default", "value": "no_value ps" }
-      ], "total_cpu": 218, "total_cpu_user": 218, "total_real": 176, "delta_cpu_not_child": 3, "delta_cpu_user_not_child": 3, "delta_cpu": 3, "delta_cpu_user": 3, "delta_real": 8, "real_start": 1644445621, "real_end": 1644445629 }
+      ], "total_cpu": 212, "total_cpu_user": 212, "total_real": 172, "delta_cpu_not_child": 2, "delta_cpu_user_not_child": 2, "delta_cpu": 2, "delta_cpu_user": 2, "delta_real": 8, "real_start": 1646170865, "real_end": 1646170873 }
   ],
   "metrics": [
     { "name": "alerts", "value": "", "inherited": true }, 
@@ -490,17 +490,17 @@
     { "name": "design.name", "value": "cpu_z80", "inherited": true }, 
     { "name": "design.nets.global", "value": "0", "inherited": true }, 
     { "name": "design.nets.signal", "value": "2727", "inherited": true }, 
-    { "name": "flow.cputime", "value": "218" }, 
-    { "name": "flow.cputime.total", "value": "218" }, 
-    { "name": "flow.cputime.user", "value": "218" }, 
-    { "name": "flow.cputime.user.total", "value": "218" }, 
-    { "name": "flow.log", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis/genus.log11", "inherited": true }, 
+    { "name": "flow.cputime", "value": "212" }, 
+    { "name": "flow.cputime.total", "value": "212" }, 
+    { "name": "flow.cputime.user", "value": "212" }, 
+    { "name": "flow.cputime.user.total", "value": "212" }, 
+    { "name": "flow.log", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis/genus.log16", "inherited": true }, 
     { "name": "flow.machine", "value": "pgmicro01.ufrgs.br", "inherited": true }, 
-    { "name": "flow.machine.load", "value": "2.16", "inherited": true }, 
+    { "name": "flow.machine.load", "value": "1.78", "inherited": true }, 
     { "name": "flow.memory", "value": "314 MB", "inherited": true }, 
     { "name": "flow.memory.resident", "value": "314 MB", "inherited": true }, 
-    { "name": "flow.realtime", "value": "176" }, 
-    { "name": "flow.realtime.total", "value": "176" }, 
+    { "name": "flow.realtime", "value": "172" }, 
+    { "name": "flow.realtime.total", "value": "172" }, 
     { "name": "flow.run_directory", "value": "/home/inf01185/arthur.ferreira/work/cpu_z80/synthesis", "inherited": true }, 
     { "name": "flow.tool.name", "value": "Genus(TM) Synthesis Solution", "inherited": true }, 
     { "name": "flow.tool.name.short", "value": "genus", "inherited": true }, 
@@ -532,5 +532,5 @@
     { "name": "timing.setup.wns.cg_enable_group_CLK", "value": "0.0 ps", "inherited": true }, 
     { "name": "timing.setup.wns.default", "value": "no_value ps", "inherited": true }
   ],
-  "total_cpu": 218, "total_cpu_user": 218, "total_real": 176
+  "total_cpu": 212, "total_cpu_user": 212, "total_real": 172
 }

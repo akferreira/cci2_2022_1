@@ -1,6 +1,6 @@
 ######################################################################
 
-# Created by Genus(TM) Synthesis Solution GENUS15.22 - 15.20-s024_1 on Wed Feb 09 19:27:26 -0300 2022
+# Created by Genus(TM) Synthesis Solution GENUS15.22 - 15.20-s024_1 on Tue Mar 01 18:41:30 -0300 2022
 
 # This file contains the RC script for design:cpu_z80
 
@@ -11,12 +11,12 @@ set_db / .init_lib_search_path {. ./lib /pdk/xfab/XC018_61_3.1.3/synopsys/xc018/
 set_db / .design_mode_process 230.0
 set_db / .phys_assume_met_fill 0.0
 set_db / .lp_insert_clock_gating true
-set_db / .runtime_by_stage { {to_generic 11 46 11 44}  {first_condense 32 89 49 97}  {reify 34 123 78 176}  {global_incr_map 16 140 16 192}  {incr_opt 13 168 12 214}  {incr_opt 2 176 1 217} }
+set_db / .runtime_by_stage { {to_generic 11 46 11 43}  {first_condense 32 88 48 96}  {reify 33 121 75 171}  {global_incr_map 16 137 15 187}  {incr_opt 13 164 12 209}  {incr_opt 2 172 1 211} }
 set_db / .tinfo_tstamp_file .rs_arthur.ferreira.tstamp
 set_db / .script_search_path {. }
 set_db / .use_area_from_lef true
 set_db / .leakage_power_effort medium
-set_db / .flow_metrics_snapshot_uuid 3b06ad20
+set_db / .flow_metrics_snapshot_uuid 3b1cae42
 set_db / .super_thread_servers {localhost localhost localhost localhost localhost localhost localhost localhost   }
 set_db / .syn_opt_effort low
 ::legacy::set_attribute -quiet break_timing_paths true pin:cpu_z80/RC_CG_HIER_INST1/g12/B
@@ -101,35 +101,35 @@ external_delay -accumulate -input {no_value no_value 200.0 200.0} -clock clock:c
 external_delay -accumulate -input {no_value no_value 200.0 200.0} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_20_10_1 port:cpu_z80/INT
 external_delay -accumulate -input {no_value no_value 200.0 200.0} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_20_11_1 port:cpu_z80/NMI
 external_delay -accumulate -input {no_value no_value 200.0 200.0} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_20_12_1 port:cpu_z80/WAIT
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27 {{port:cpu_z80/DO[7]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_13_1 {{port:cpu_z80/DO[6]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_14_1 {{port:cpu_z80/DO[5]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_15_1 {{port:cpu_z80/DO[4]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_16_1 {{port:cpu_z80/DO[3]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_17_1 {{port:cpu_z80/DO[2]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_18_1 {{port:cpu_z80/DO[1]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_19_1 {{port:cpu_z80/DO[0]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_20_1 {{port:cpu_z80/ADDR[15]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_21_1 {{port:cpu_z80/ADDR[14]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_22_1 {{port:cpu_z80/ADDR[13]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_23_1 {{port:cpu_z80/ADDR[12]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_24_1 {{port:cpu_z80/ADDR[11]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_25_1 {{port:cpu_z80/ADDR[10]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_26_1 {{port:cpu_z80/ADDR[9]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_27_1 {{port:cpu_z80/ADDR[8]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_28_1 {{port:cpu_z80/ADDR[7]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_29_1 {{port:cpu_z80/ADDR[6]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_30_1 {{port:cpu_z80/ADDR[5]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_31_1 {{port:cpu_z80/ADDR[4]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_32_1 {{port:cpu_z80/ADDR[3]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_33_1 {{port:cpu_z80/ADDR[2]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_34_1 {{port:cpu_z80/ADDR[1]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_35_1 {{port:cpu_z80/ADDR[0]}}
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_36_1 port:cpu_z80/WR
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_37_1 port:cpu_z80/MREQ
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_38_1 port:cpu_z80/IORQ
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_39_1 port:cpu_z80/HALT
-external_delay -accumulate -output {200.0 200.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_40_1 port:cpu_z80/M1
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27 {{port:cpu_z80/DO[7]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_13_1 {{port:cpu_z80/DO[6]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_14_1 {{port:cpu_z80/DO[5]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_15_1 {{port:cpu_z80/DO[4]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_16_1 {{port:cpu_z80/DO[3]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_17_1 {{port:cpu_z80/DO[2]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_18_1 {{port:cpu_z80/DO[1]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_19_1 {{port:cpu_z80/DO[0]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_20_1 {{port:cpu_z80/ADDR[15]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_21_1 {{port:cpu_z80/ADDR[14]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_22_1 {{port:cpu_z80/ADDR[13]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_23_1 {{port:cpu_z80/ADDR[12]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_24_1 {{port:cpu_z80/ADDR[11]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_25_1 {{port:cpu_z80/ADDR[10]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_26_1 {{port:cpu_z80/ADDR[9]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_27_1 {{port:cpu_z80/ADDR[8]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_28_1 {{port:cpu_z80/ADDR[7]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_29_1 {{port:cpu_z80/ADDR[6]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_30_1 {{port:cpu_z80/ADDR[5]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_31_1 {{port:cpu_z80/ADDR[4]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_32_1 {{port:cpu_z80/ADDR[3]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_33_1 {{port:cpu_z80/ADDR[2]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_34_1 {{port:cpu_z80/ADDR[1]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_35_1 {{port:cpu_z80/ADDR[0]}}
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_36_1 port:cpu_z80/WR
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_37_1 port:cpu_z80/MREQ
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_38_1 port:cpu_z80/IORQ
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_39_1 port:cpu_z80/HALT
+external_delay -accumulate -output {500.0 500.0 no_value no_value} -clock clock:cpu_z80/CLK -name busca_padrao.sdc_line_27_40_1 port:cpu_z80/M1
 external_delay -accumulate -output {no_value no_value 0.0 0.0} -clock clock:cpu_z80/CLK -name clk_gating_check_1 pin:cpu_z80/CPU_REGS_regs_lo_RC_CG_HIER_INST27/g13/B
 ::legacy::set_attribute -quiet clock_network_latency_included true external_delay:cpu_z80/clk_gating_check_1
 ::legacy::set_attribute -quiet clock_source_latency_included true external_delay:cpu_z80/clk_gating_check_1
@@ -253,7 +253,7 @@ path_group -paths [specify_paths -through {hpin:cpu_z80/CPU_REGS_regs_hi_RC_CG_H
 ::legacy::set_attribute -quiet dft_scan_style muxed_scan /
 ::legacy::set_attribute -quiet dft_scanbit_waveform_analysis false /
 # END DFT SECTION
-::legacy::set_attribute -quiet qos_by_stage {{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 98597} {cell_count 4476} {utilization  0.00} {runtime 11 46 11 44} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 92868} {cell_count 5087} {utilization  0.00} {runtime 32 89 49 97} }{reify {wns 0} {tns 0} {vep 0} {area 62726} {cell_count 3218} {utilization  0.00} {runtime 34 123 78 176} }{global_incr_map {wns 0} {tns 0} {vep 0} {area 55843} {cell_count 2798} {utilization  0.00} {runtime 16 140 16 192} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 53457} {cell_count 2672} {utilization  0.00} {runtime 13 168 12 214} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 53451} {cell_count 2672} {utilization  0.00} {runtime 2 176 1 217} }} design:cpu_z80
+::legacy::set_attribute -quiet qos_by_stage {{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 98597} {cell_count 4476} {utilization  0.00} {runtime 11 46 11 43} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 92868} {cell_count 5087} {utilization  0.00} {runtime 32 88 48 96} }{reify {wns 0} {tns 0} {vep 0} {area 62726} {cell_count 3218} {utilization  0.00} {runtime 33 121 75 171} }{global_incr_map {wns 0} {tns 0} {vep 0} {area 55843} {cell_count 2798} {utilization  0.00} {runtime 16 137 15 187} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 53457} {cell_count 2672} {utilization  0.00} {runtime 13 164 12 209} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 53451} {cell_count 2672} {utilization  0.00} {runtime 2 172 1 211} }} design:cpu_z80
 ::legacy::set_attribute -quiet is_sop_cluster true design:cpu_z80
 ::legacy::set_attribute -quiet hdl_user_name cpu_z80 design:cpu_z80
 ::legacy::set_attribute -quiet hdl_filelist {{default -v2001 {SYNTHESIS} {../rtl/cpu_z80.v} {. ../rtl}}} design:cpu_z80
@@ -445,187 +445,187 @@ path_group -paths [specify_paths -through {hpin:cpu_z80/CPU_REGS_regs_hi_RC_CG_H
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_1
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_1
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_1
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_1
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_1
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_1
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_1
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_2
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_2
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_2
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_2
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_2
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_2
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_2
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_3
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_3
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_3
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_3
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_3
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_3
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_3
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_9
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_9
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_9
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_9
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_9
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_9
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_9
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_4
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_4
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_4
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_4
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_4
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_4
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_4
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_5
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_5
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_5
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_5
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_5
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_5
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_5
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_6
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_6
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_6
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_6
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_6
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_6
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_6
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_7
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_7
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_7
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_7
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_7
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_7
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_7
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_8
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_8
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_8
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_8
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_8
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_8
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_8
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_10
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_10
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_10
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_10
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_10
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_10
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_10
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_11
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_11
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_11
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_11
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_11
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_11
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_11
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_12
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_12
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_12
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_12
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_12
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_12
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_12
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_13
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_13
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_13
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_13
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_13
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_13
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_13
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_14
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_14
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_14
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_14
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_14
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_14
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_14
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_15
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_15
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_15
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_15
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_15
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_15
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_15
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_16
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_16
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_16
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_16
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_16
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_16
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_16
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_17
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_17
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_17
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_17
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_17
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_17
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_17
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_18
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_18
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_18
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_18
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_18
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_18
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_18
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_19
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_19
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_19
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_19
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_19
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_19
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_19
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_21
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_21
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_21
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_21
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_21
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_21
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_21
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_22
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_22
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_22
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_22
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_22
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_22
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_22
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_23
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_23
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_23
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_23
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_23
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_23
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_23
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_25
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_25
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_25
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_25
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_25
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_25
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_25
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_26
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_26
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_26
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_26
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_26
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_26
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_26
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_27
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_27
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_27
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_27
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_27
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_27
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_27
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_28
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_28
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_28
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_28
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_28
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_28
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_28
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_29
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_29
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_29
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_29
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_29
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_29
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_29
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_30
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_30
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_30
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_30
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_30
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_30
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_30
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_32
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_32
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_32
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_32
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_32
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_32
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_32
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_33
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_33
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_33
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_33
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_33
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_33
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_33
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_34
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_34
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_34
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_34
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_34
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_34
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_34
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_35
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_35
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_35
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_35
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_35
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_35
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_35
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_37
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_37
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_37
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_37
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_37
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_37
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_37
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_38
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_38
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_38
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_38
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_38
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_38
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_38
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_39
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_39
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_39
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_39
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_39
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_39
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_39
 ::legacy::set_attribute -quiet logical_hier false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_41
 ::legacy::set_attribute -quiet hdl_user_name RC_CG_MOD_AUTO_cpu_z80 module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_41
 ::legacy::set_attribute -quiet boundary_opto false module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_41
-::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_41
-::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_34748.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_41
+::legacy::set_attribute -quiet arch_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_41
+::legacy::set_attribute -quiet entity_filename /tmp/latch_posedge_precontrol_cpu_z80_10650.v module:cpu_z80/RC_CG_MOD_AUTO_cpu_z80_41
 # BEGIN PHYSICAL ANNOTATION SECTION
 # END PHYSICAL ANNOTATION SECTION

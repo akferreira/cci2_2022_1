@@ -2,7 +2,7 @@
 #
 # Genus(TM) Synthesis Solution setup file
 # Created by Genus(TM) Synthesis Solution GENUS15.22 - 15.20-s024_1
-#   on 02/09/2022 19:27:27
+#   on 03/01/2022 18:41:31
 #
 # This file can only be run in Genus Common UI mode.
 #
