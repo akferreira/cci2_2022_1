@@ -97,7 +97,7 @@ wire WR_O,MREQ_O,IORQ_O,HALT_O,M1_O;
 wire [7:0] DO_O;
 wire [0:14] ADDR_O;
 
-cpu_z80 top_INST(
+cpu_z80 cpu_z80_INST(
 	.CLK(CLK_I)
 	.RESET(RESET_I),
 	.INT(INT_I),
