@@ -10,7 +10,7 @@ output [0:14] ADDR;
 
 
 output [7:0] DI_I;
-output DI_I,CLK_I,RESET_I,INT_I,NMI_I,WAIT_I;
+output CLK_I,RESET_I,INT_I,NMI_I,WAIT_I;
 
 input WR_O,MREQ_O,IORQ_O,HALT_O,M1_O;
 input[7:0] DO_O;
@@ -114,7 +114,7 @@ cpu_z80 cpu_z80_INST(
 );
 
 iopads IOPADS_INST(
-	.CLK(CLK)
+	.CLK(CLK),
 	.RESET(RESET),
 	.INT(INT),
 	.NMI(NMI),
@@ -126,10 +126,10 @@ iopads IOPADS_INST(
 	.MREQ(MREQ), 
 	.IORQ(IORQ), 
 	.HALT(HALT), 
-	.M1(M1)
+	.M1(M1),
 
 
-	.CLK_I(CLK_I)
+	.CLK_I(CLK_I),
 	.RESET_I(RESET_I),
 	.INT_I(INT_I),
 	.NMI_I(NMI_I),
@@ -142,7 +142,6 @@ iopads IOPADS_INST(
 	.IORQ_O(IORQ_O), 
 	.HALT_O(HALT_O), 
 	.M1_O(M1_O)
-	.
 
 );
 
