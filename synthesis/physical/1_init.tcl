@@ -17,6 +17,6 @@ source innovus/busca_padrao.invs_setup.tcl
 
 ##Generating square floorplan (1) with 80% of density (0.8) with 3um margins (3 3 3 3)
 create_floorplan -site core -core_density_size 1 0.8 3 3 3 3
-
+read_io_file iopads.io
 ##fit screen
 gui_fit

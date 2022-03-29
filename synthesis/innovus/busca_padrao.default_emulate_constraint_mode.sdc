@@ -1,6 +1,6 @@
 # ####################################################################
 
-#  Created by Genus(TM) Synthesis Solution GENUS15.22 - 15.20-s024_1 on Tue Mar 01 18:41:30 -0300 2022
+#  Created by Genus(TM) Synthesis Solution GENUS15.22 - 15.20-s024_1 on Tue Mar 22 10:28:07 -0300 2022
 
 # ####################################################################
 
@@ -74,7 +74,6 @@ set_load -pin_load -min 0.1 [get_ports M1]
 set_load -pin_load -max 0.33 [get_ports M1]
 set_false_path -from [get_ports RESET]
 group_path -name C2C -from [list \
-  [get_cells {CPU_REGS_flg_reg[0]}]  \
   [get_cells {CPU_REGS_flg_reg[10]}]  \
   [get_cells {CPU_REGS_flg_reg[11]}]  \
   [get_cells {CPU_REGS_flg_reg[12]}]  \
@@ -88,7 +87,6 @@ group_path -name C2C -from [list \
   [get_cells {CPU_REGS_flg_reg[5]}]  \
   [get_cells {CPU_REGS_flg_reg[6]}]  \
   [get_cells {CPU_REGS_flg_reg[7]}]  \
-  [get_cells {CPU_REGS_flg_reg[8]}]  \
   [get_cells {CPU_REGS_flg_reg[9]}]  \
   [get_cells {CPU_REGS_r_reg[0]}]  \
   [get_cells {CPU_REGS_r_reg[1]}]  \
@@ -113,9 +111,9 @@ group_path -name C2C -from [list \
   [get_cells {FETCH_reg[0]}]  \
   [get_cells {FETCH_reg[1]}]  \
   [get_cells {FETCH_reg[3]}]  \
-  [get_cells {FETCH_reg[4]}]  \
   [get_cells {FETCH_reg[5]}]  \
   [get_cells {FETCH_reg[7]}]  \
+  [get_cells {STAGE_reg[0]}]  \
   [get_cells {STAGE_reg[2]}]  \
   [get_cells tzf_reg]  \
   [get_cells {CPU_REGS_th_reg[0]}]  \
@@ -129,6 +127,8 @@ group_path -name C2C -from [list \
   [get_cells SINT_reg]  \
   [get_cells SNMI_reg]  \
   [get_cells SRESET_reg]  \
+  [get_cells {CPU_REGS_flg_reg[0]}]  \
+  [get_cells {CPU_REGS_flg_reg[8]}]  \
   [get_cells {CPU_REGS_pc_reg[0]}]  \
   [get_cells {CPU_REGS_pc_reg[10]}]  \
   [get_cells {CPU_REGS_pc_reg[11]}]  \
@@ -370,10 +370,9 @@ group_path -name C2C -from [list \
   [get_cells {CPU_REGS_sp_reg[7]}]  \
   [get_cells {CPU_REGS_sp_reg[8]}]  \
   [get_cells {CPU_REGS_sp_reg[9]}]  \
-  [get_cells {STAGE_reg[1]}]  \
   [get_cells {FETCH_reg[2]}]  \
   [get_cells {FETCH_reg[6]}]  \
-  [get_cells {STAGE_reg[0]}]  \
+  [get_cells {STAGE_reg[1]}]  \
   [get_cells {FETCH_reg[8]}]  \
   [get_cells {FETCH_reg[9]}]  \
   [get_cells {CPUStatus_reg[1]}]  \
@@ -381,12 +380,12 @@ group_path -name C2C -from [list \
   [get_cells {CPUStatus_reg[3]}]  \
   [get_cells FNMI_reg]  \
   [get_cells {CPUStatus_reg[6]}]  \
-  [get_cells {CPUStatus_reg[7]}] ] -to [list \
+  [get_cells {CPUStatus_reg[7]}]  \
+  [get_cells {FETCH_reg[4]}] ] -to [list \
   [get_cells RC_CG_HIER_INST4/enl_reg]  \
   [get_cells RC_CG_HIER_INST3/enl_reg]  \
   [get_cells RC_CG_HIER_INST2/enl_reg]  \
   [get_cells RC_CG_HIER_INST1/enl_reg]  \
-  [get_cells {CPU_REGS_flg_reg[0]}]  \
   [get_cells {CPU_REGS_flg_reg[10]}]  \
   [get_cells {CPU_REGS_flg_reg[11]}]  \
   [get_cells {CPU_REGS_flg_reg[12]}]  \
@@ -400,7 +399,6 @@ group_path -name C2C -from [list \
   [get_cells {CPU_REGS_flg_reg[5]}]  \
   [get_cells {CPU_REGS_flg_reg[6]}]  \
   [get_cells {CPU_REGS_flg_reg[7]}]  \
-  [get_cells {CPU_REGS_flg_reg[8]}]  \
   [get_cells {CPU_REGS_flg_reg[9]}]  \
   [get_cells {CPU_REGS_r_reg[0]}]  \
   [get_cells {CPU_REGS_r_reg[1]}]  \
@@ -417,51 +415,51 @@ group_path -name C2C -from [list \
   [get_cells {CPU_REGS_regs_hi_data_reg[13][5]}]  \
   [get_cells {CPU_REGS_regs_hi_data_reg[13][6]}]  \
   [get_cells {CPU_REGS_regs_hi_data_reg[13][7]}]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST28/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST27/enl_reg]  \
-  [get_cells CPU_REGS_RC_CG_HIER_INST5/enl_reg]  \
-  [get_cells CPU_REGS_RC_CG_HIER_INST8/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST30/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST11/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST12/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST23/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST29/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST14/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST13/enl_reg]  \
+  [get_cells {CPUStatus_reg[0]}]  \
+  [get_cells {CPUStatus_reg[4]}]  \
+  [get_cells {CPUStatus_reg[5]}]  \
+  [get_cells {CPUStatus_reg[8]}]  \
+  [get_cells {CPUStatus_reg[9]}]  \
+  [get_cells {FETCH_reg[0]}]  \
+  [get_cells {FETCH_reg[1]}]  \
+  [get_cells {FETCH_reg[3]}]  \
+  [get_cells {FETCH_reg[5]}]  \
+  [get_cells {FETCH_reg[7]}]  \
+  [get_cells {STAGE_reg[0]}]  \
+  [get_cells {STAGE_reg[2]}]  \
+  [get_cells tzf_reg]  \
   [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST26/enl_reg]  \
-  [get_cells CPU_REGS_RC_CG_HIER_INST10/enl_reg]  \
+  [get_cells CPU_REGS_RC_CG_HIER_INST5/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST28/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST24/enl_reg]  \
+  [get_cells CPU_REGS_RC_CG_HIER_INST9/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST23/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST11/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST29/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST13/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST12/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST27/enl_reg]  \
   [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST34/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST36/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST18/enl_reg]  \
   [get_cells CPU_REGS_RC_CG_HIER_INST7/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST15/enl_reg]  \
   [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST17/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST19/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST40/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST22/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST18/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST16/enl_reg]  \
   [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST39/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST42/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST36/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST40/enl_reg]  \
   [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST35/enl_reg]  \
   [get_cells CPU_REGS_RC_CG_HIER_INST6/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST19/enl_reg]  \
   [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST20/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST16/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST22/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST33/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST31/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST24/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST15/enl_reg]  \
   [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST38/enl_reg]  \
-  [get_cells {CPUStatus_reg[0]}]  \
-  [get_cells {CPUStatus_reg[4]}]  \
-  [get_cells {CPUStatus_reg[5]}]  \
-  [get_cells {CPUStatus_reg[8]}]  \
-  [get_cells {CPUStatus_reg[9]}]  \
-  [get_cells {FETCH_reg[0]}]  \
-  [get_cells {FETCH_reg[1]}]  \
-  [get_cells {FETCH_reg[3]}]  \
-  [get_cells {FETCH_reg[4]}]  \
-  [get_cells {FETCH_reg[5]}]  \
-  [get_cells {FETCH_reg[7]}]  \
-  [get_cells {STAGE_reg[2]}]  \
-  [get_cells tzf_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST33/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST14/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST31/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST30/enl_reg]  \
+  [get_cells CPU_REGS_RC_CG_HIER_INST10/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST42/enl_reg]  \
   [get_cells {CPU_REGS_th_reg[0]}]  \
   [get_cells {CPU_REGS_th_reg[1]}]  \
   [get_cells {CPU_REGS_th_reg[2]}]  \
@@ -470,10 +468,12 @@ group_path -name C2C -from [list \
   [get_cells {CPU_REGS_th_reg[5]}]  \
   [get_cells {CPU_REGS_th_reg[6]}]  \
   [get_cells {CPU_REGS_th_reg[7]}]  \
-  [get_cells CPU_REGS_RC_CG_HIER_INST9/enl_reg]  \
+  [get_cells CPU_REGS_RC_CG_HIER_INST8/enl_reg]  \
   [get_cells SINT_reg]  \
   [get_cells SNMI_reg]  \
   [get_cells SRESET_reg]  \
+  [get_cells {CPU_REGS_flg_reg[0]}]  \
+  [get_cells {CPU_REGS_flg_reg[8]}]  \
   [get_cells {CPU_REGS_pc_reg[0]}]  \
   [get_cells {CPU_REGS_pc_reg[10]}]  \
   [get_cells {CPU_REGS_pc_reg[11]}]  \
@@ -715,10 +715,9 @@ group_path -name C2C -from [list \
   [get_cells {CPU_REGS_sp_reg[7]}]  \
   [get_cells {CPU_REGS_sp_reg[8]}]  \
   [get_cells {CPU_REGS_sp_reg[9]}]  \
-  [get_cells {STAGE_reg[1]}]  \
   [get_cells {FETCH_reg[2]}]  \
   [get_cells {FETCH_reg[6]}]  \
-  [get_cells {STAGE_reg[0]}]  \
+  [get_cells {STAGE_reg[1]}]  \
   [get_cells {FETCH_reg[8]}]  \
   [get_cells {FETCH_reg[9]}]  \
   [get_cells {CPUStatus_reg[1]}]  \
@@ -726,9 +725,9 @@ group_path -name C2C -from [list \
   [get_cells {CPUStatus_reg[3]}]  \
   [get_cells FNMI_reg]  \
   [get_cells {CPUStatus_reg[6]}]  \
-  [get_cells {CPUStatus_reg[7]}] ]
+  [get_cells {CPUStatus_reg[7]}]  \
+  [get_cells {FETCH_reg[4]}] ]
 group_path -name C2O -from [list \
-  [get_cells {CPU_REGS_flg_reg[0]}]  \
   [get_cells {CPU_REGS_flg_reg[10]}]  \
   [get_cells {CPU_REGS_flg_reg[11]}]  \
   [get_cells {CPU_REGS_flg_reg[12]}]  \
@@ -742,7 +741,6 @@ group_path -name C2O -from [list \
   [get_cells {CPU_REGS_flg_reg[5]}]  \
   [get_cells {CPU_REGS_flg_reg[6]}]  \
   [get_cells {CPU_REGS_flg_reg[7]}]  \
-  [get_cells {CPU_REGS_flg_reg[8]}]  \
   [get_cells {CPU_REGS_flg_reg[9]}]  \
   [get_cells {CPU_REGS_r_reg[0]}]  \
   [get_cells {CPU_REGS_r_reg[1]}]  \
@@ -767,9 +765,9 @@ group_path -name C2O -from [list \
   [get_cells {FETCH_reg[0]}]  \
   [get_cells {FETCH_reg[1]}]  \
   [get_cells {FETCH_reg[3]}]  \
-  [get_cells {FETCH_reg[4]}]  \
   [get_cells {FETCH_reg[5]}]  \
   [get_cells {FETCH_reg[7]}]  \
+  [get_cells {STAGE_reg[0]}]  \
   [get_cells {STAGE_reg[2]}]  \
   [get_cells tzf_reg]  \
   [get_cells {CPU_REGS_th_reg[0]}]  \
@@ -783,6 +781,8 @@ group_path -name C2O -from [list \
   [get_cells SINT_reg]  \
   [get_cells SNMI_reg]  \
   [get_cells SRESET_reg]  \
+  [get_cells {CPU_REGS_flg_reg[0]}]  \
+  [get_cells {CPU_REGS_flg_reg[8]}]  \
   [get_cells {CPU_REGS_pc_reg[0]}]  \
   [get_cells {CPU_REGS_pc_reg[10]}]  \
   [get_cells {CPU_REGS_pc_reg[11]}]  \
@@ -1024,10 +1024,9 @@ group_path -name C2O -from [list \
   [get_cells {CPU_REGS_sp_reg[7]}]  \
   [get_cells {CPU_REGS_sp_reg[8]}]  \
   [get_cells {CPU_REGS_sp_reg[9]}]  \
-  [get_cells {STAGE_reg[1]}]  \
   [get_cells {FETCH_reg[2]}]  \
   [get_cells {FETCH_reg[6]}]  \
-  [get_cells {STAGE_reg[0]}]  \
+  [get_cells {STAGE_reg[1]}]  \
   [get_cells {FETCH_reg[8]}]  \
   [get_cells {FETCH_reg[9]}]  \
   [get_cells {CPUStatus_reg[1]}]  \
@@ -1035,7 +1034,8 @@ group_path -name C2O -from [list \
   [get_cells {CPUStatus_reg[3]}]  \
   [get_cells FNMI_reg]  \
   [get_cells {CPUStatus_reg[6]}]  \
-  [get_cells {CPUStatus_reg[7]}] ] -to [list \
+  [get_cells {CPUStatus_reg[7]}]  \
+  [get_cells {FETCH_reg[4]}] ] -to [list \
   [get_ports {DO[7]}]  \
   [get_ports {DO[6]}]  \
   [get_ports {DO[5]}]  \
@@ -1083,7 +1083,6 @@ group_path -name I2C -from [list \
   [get_cells RC_CG_HIER_INST3/enl_reg]  \
   [get_cells RC_CG_HIER_INST2/enl_reg]  \
   [get_cells RC_CG_HIER_INST1/enl_reg]  \
-  [get_cells {CPU_REGS_flg_reg[0]}]  \
   [get_cells {CPU_REGS_flg_reg[10]}]  \
   [get_cells {CPU_REGS_flg_reg[11]}]  \
   [get_cells {CPU_REGS_flg_reg[12]}]  \
@@ -1097,7 +1096,6 @@ group_path -name I2C -from [list \
   [get_cells {CPU_REGS_flg_reg[5]}]  \
   [get_cells {CPU_REGS_flg_reg[6]}]  \
   [get_cells {CPU_REGS_flg_reg[7]}]  \
-  [get_cells {CPU_REGS_flg_reg[8]}]  \
   [get_cells {CPU_REGS_flg_reg[9]}]  \
   [get_cells {CPU_REGS_r_reg[0]}]  \
   [get_cells {CPU_REGS_r_reg[1]}]  \
@@ -1114,38 +1112,6 @@ group_path -name I2C -from [list \
   [get_cells {CPU_REGS_regs_hi_data_reg[13][5]}]  \
   [get_cells {CPU_REGS_regs_hi_data_reg[13][6]}]  \
   [get_cells {CPU_REGS_regs_hi_data_reg[13][7]}]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST28/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST27/enl_reg]  \
-  [get_cells CPU_REGS_RC_CG_HIER_INST5/enl_reg]  \
-  [get_cells CPU_REGS_RC_CG_HIER_INST8/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST30/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST11/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST12/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST23/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST29/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST14/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST13/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST26/enl_reg]  \
-  [get_cells CPU_REGS_RC_CG_HIER_INST10/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST34/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST36/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST18/enl_reg]  \
-  [get_cells CPU_REGS_RC_CG_HIER_INST7/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST17/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST19/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST40/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST39/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST42/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST35/enl_reg]  \
-  [get_cells CPU_REGS_RC_CG_HIER_INST6/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST20/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST16/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST22/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST33/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST31/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST24/enl_reg]  \
-  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST15/enl_reg]  \
-  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST38/enl_reg]  \
   [get_cells {CPUStatus_reg[0]}]  \
   [get_cells {CPUStatus_reg[4]}]  \
   [get_cells {CPUStatus_reg[5]}]  \
@@ -1154,11 +1120,43 @@ group_path -name I2C -from [list \
   [get_cells {FETCH_reg[0]}]  \
   [get_cells {FETCH_reg[1]}]  \
   [get_cells {FETCH_reg[3]}]  \
-  [get_cells {FETCH_reg[4]}]  \
   [get_cells {FETCH_reg[5]}]  \
   [get_cells {FETCH_reg[7]}]  \
+  [get_cells {STAGE_reg[0]}]  \
   [get_cells {STAGE_reg[2]}]  \
   [get_cells tzf_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST26/enl_reg]  \
+  [get_cells CPU_REGS_RC_CG_HIER_INST5/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST28/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST24/enl_reg]  \
+  [get_cells CPU_REGS_RC_CG_HIER_INST9/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST23/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST11/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST29/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST13/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST12/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST27/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST34/enl_reg]  \
+  [get_cells CPU_REGS_RC_CG_HIER_INST7/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST15/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST17/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST22/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST18/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST16/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST39/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST36/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST40/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST35/enl_reg]  \
+  [get_cells CPU_REGS_RC_CG_HIER_INST6/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST19/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST20/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST38/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST33/enl_reg]  \
+  [get_cells CPU_REGS_regs_hi_RC_CG_HIER_INST14/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST31/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST30/enl_reg]  \
+  [get_cells CPU_REGS_RC_CG_HIER_INST10/enl_reg]  \
+  [get_cells CPU_REGS_regs_lo_RC_CG_HIER_INST42/enl_reg]  \
   [get_cells {CPU_REGS_th_reg[0]}]  \
   [get_cells {CPU_REGS_th_reg[1]}]  \
   [get_cells {CPU_REGS_th_reg[2]}]  \
@@ -1167,10 +1165,12 @@ group_path -name I2C -from [list \
   [get_cells {CPU_REGS_th_reg[5]}]  \
   [get_cells {CPU_REGS_th_reg[6]}]  \
   [get_cells {CPU_REGS_th_reg[7]}]  \
-  [get_cells CPU_REGS_RC_CG_HIER_INST9/enl_reg]  \
+  [get_cells CPU_REGS_RC_CG_HIER_INST8/enl_reg]  \
   [get_cells SINT_reg]  \
   [get_cells SNMI_reg]  \
   [get_cells SRESET_reg]  \
+  [get_cells {CPU_REGS_flg_reg[0]}]  \
+  [get_cells {CPU_REGS_flg_reg[8]}]  \
   [get_cells {CPU_REGS_pc_reg[0]}]  \
   [get_cells {CPU_REGS_pc_reg[10]}]  \
   [get_cells {CPU_REGS_pc_reg[11]}]  \
@@ -1412,10 +1412,9 @@ group_path -name I2C -from [list \
   [get_cells {CPU_REGS_sp_reg[7]}]  \
   [get_cells {CPU_REGS_sp_reg[8]}]  \
   [get_cells {CPU_REGS_sp_reg[9]}]  \
-  [get_cells {STAGE_reg[1]}]  \
   [get_cells {FETCH_reg[2]}]  \
   [get_cells {FETCH_reg[6]}]  \
-  [get_cells {STAGE_reg[0]}]  \
+  [get_cells {STAGE_reg[1]}]  \
   [get_cells {FETCH_reg[8]}]  \
   [get_cells {FETCH_reg[9]}]  \
   [get_cells {CPUStatus_reg[1]}]  \
@@ -1423,7 +1422,8 @@ group_path -name I2C -from [list \
   [get_cells {CPUStatus_reg[3]}]  \
   [get_cells FNMI_reg]  \
   [get_cells {CPUStatus_reg[6]}]  \
-  [get_cells {CPUStatus_reg[7]}] ]
+  [get_cells {CPUStatus_reg[7]}]  \
+  [get_cells {FETCH_reg[4]}] ]
 group_path -name I2O -from [list \
   [get_ports {DI[7]}]  \
   [get_ports {DI[6]}]  \

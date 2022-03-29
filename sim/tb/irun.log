@@ -1,5 +1,5 @@
 irun(64): 15.20-s022: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s022: Started on Feb 24, 2022 at 15:39:45 -03
+TOOL:	irun(64)	15.20-s022: Started on Mar 05, 2022 at 19:38:34 -03
 irun
 	-f ../rtl/file_list.f
 		-smartorder
@@ -10,9 +10,21 @@ irun
 		-access +rw
 		../../rtl/cpu_z80.v
 		../tb/tb_z80.v
-Recompiling... reason: file './tb_z80.v' is newer than expected.
-	expected: Sat Nov 20 02:50:03 2021
-	actual:   Sat Nov 20 02:54:08 2021
+file: ../../rtl/cpu_z80.v
+	module work.cpu_z80:v
+		errors: 0, warnings: 0
+	module work.Z80Reg:v
+		errors: 0, warnings: 0
+	module work.RegSelect:v
+		errors: 0, warnings: 0
+	module work.RAM16X8D_regs:v
+		errors: 0, warnings: 0
+	module work.ALU8:v
+		errors: 0, warnings: 0
+	module work.daa:v
+		errors: 0, warnings: 0
+	module work.ALU16:v
+		errors: 0, warnings: 0
 file: ../tb/tb_z80.v
 	module work.tb_z80:v
 		errors: 0, warnings: 0
@@ -22,6 +34,20 @@ file: ../tb/tb_z80.v
 		tb_z80
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
+		work.ALU16:v <0x1cae0aea>
+			streams:   2, words:   620
+		work.ALU8:v <0x64555da6>
+			streams:   7, words: 23002
+		work.RAM16X8D_regs:v <0x36458f2e>
+			streams:   4, words:  1568
+		work.RegSelect:v <0x46de6ba4>
+			streams:   1, words:  1970
+		work.Z80Reg:v <0x0a8efef4>
+			streams:  22, words:  7786
+		work.cpu_z80:v <0x56a5f0ef>
+			streams:  42, words: 157141
+		work.daa:v <0x56af1521>
+			streams:   3, words:  2061
 		work.tb_z80:v <0x1b5869bc>
 			streams:   8, words:  3311
 	Building instance specific data structures.
@@ -46,8 +72,12 @@ ncsim>
 ncsim> source /tools/cadence/rhel5/INCISIVE_15.20.022/tools/inca/files/ncsimrc
 ncsim> database -open waves -into waves.shm -default
 Created default SHM database waves
-ncsim> probe -create -shm tb_z80.DO tb_z80.DI tb_z80.mem1 tb_z80.count tb_z80.CLK tb_z80.ADDR
+ncsim> probe -create -shm tb_z80.DO tb_z80.DI tb_z80.CLK tb_z80.ADDR
 Created probe 1
-ncsim> run 100ns
-Ran until 100 NS + 0
-ncsim> TOOL:	irun(64)	15.20-s022: Exiting on Feb 24, 2022 at 16:28:19 -03  (total: 00:48:34)
+ncsim> run 60ns
+Ran until 60 NS + 0
+ncsim> run 60ns
+Ran until 120 NS + 0
+ncsim> ^C
+ncsim> exit
+TOOL:	irun(64)	15.20-s022: Exiting on Mar 05, 2022 at 19:42:33 -03  (total: 00:03:59)

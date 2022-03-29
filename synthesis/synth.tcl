@@ -13,7 +13,7 @@ puts "Hostname : [info hostname]"
 
 
 set DESIGN cpu_z80
-set SYN_EFF medium
+set SYN_EFF high
 set MAP_EFF high
 set DATE [clock format [clock seconds] -format "%b%d-%T"]
 set _OUTPUTS_PATH outputs_${DATE}
@@ -77,7 +77,7 @@ check_design -unresolved
 ## Constraints Setup
 ####################################################################
 
-read_sdc ../constraint/busca_padrao.sdc
+read_sdc ../constraint/cpu_z80.sdc
 puts "The number of exceptions is [llength [vfind "design:$DESIGN" -exception *]]"
 
 
@@ -188,7 +188,7 @@ foreach cg [vfind / -cost_group *] {
 
 ## An effort of low was selected to minimize runtime of incremental opto.
 ## If your timing is not met, rerun incremental opto with a different effort level
-set_db / .syn_opt_effort low
+set_db / .syn_opt_effort medium
 syn_opt -incremental
 write_snapshot -outdir $_REPORTS_PATH -tag syn_opt_low_incr
 report_summary -directory $_REPORTS_PATH
