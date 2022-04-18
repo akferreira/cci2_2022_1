@@ -4,20 +4,20 @@ Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v15.20-p005_1, built Wed Nov 11 11:16:39 PST 2015
 Options:	-common_ui 
-Date:		Tue Mar  1 18:57:41 2022
-Host:		pgmicro01 (x86_64 w/Linux 3.10.0-1160.6.1.el7.x86_64) (10cores*40cpus*Intel(R) Xeon(R) CPU E5-2650L v2 @ 1.70GHz 25600KB)
+Date:		Thu Apr  7 22:29:08 2022
+Host:		pgmicro04 (x86_64 w/Linux 3.10.0-1160.42.2.el7.x86_64) (10cores*20cpus*Intel(R) Xeon(R) CPU E5-2650L v2 @ 1.70GHz 25600KB)
 OS:		CentOS Linux release 7.9.2009 (Core)
 
 License:
 		invs	Innovus Implementation System	15.2	checkout succeeded
 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
-Create and set the environment variable TMPDIR to /tmp/innovus_temp_18508_pgmicro01_arthur.ferreira_9L9gVL.
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_46349_pgmicro04_jonas.gava_bYFYFF.
 
 
 **INFO:  MMMC transition support version v31-84 
 
 Loading fill procedures ...
-[DEV]innovus 1> source physical/1_init.tcl
+[DEV]innovus 1> source physical/1_init.tcl 
 Starting library reading in 'Multi-threaded flow' (with '8' threads)
 
 Threads Configured:8
@@ -119,9 +119,9 @@ Type 'man IMPLF-201' for more detail.
 **WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
 To increase the message display limit, refer to the product command reference manual.
 
-viaInitial starts at Tue Mar  1 18:58:39 2022
-viaInitial ends at Tue Mar  1 18:58:39 2022
-*** Begin netlist parsing (mem=618.2M) ***
+viaInitial starts at Thu Apr  7 22:29:38 2022
+viaInitial ends at Thu Apr  7 22:29:38 2022
+*** Begin netlist parsing (mem=617.7M) ***
 **WARN: (IMPVL-159):	Pin '\gnd! ' of cell 'FEEDCAP25LP' is defined in LEF but not in the timing library.
 **WARN: (IMPVL-159):	Pin '\vdd! ' of cell 'FEEDCAP25LP' is defined in LEF but not in the timing library.
 **WARN: (IMPVL-159):	Pin '\gnd! ' of cell 'FEEDCAP25' is defined in LEF but not in the timing library.
@@ -2214,11 +2214,14 @@ Pin 'VDDR' of cell 'APR00DP' is declared as power/ground in LEF but as signal in
 Created 1225 new cells from 2 timing libraries.
 Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
-Reading verilog netlist 'innovus/busca_padrao.v'
+Reading verilog netlist 'innovus/NextZ80.v'
+**WARN: (IMPVL-209):	In Verilog file 'innovus/NextZ80.v', check line 521 near the text ) for the issue: 'width-mismatched port connection'.  Update the text accordingly.
+Type 'man IMPVL-209' for more detail.
+**WARN: (IMPVL-360):	Number of nets (15) less than bus (ADDR) pin number (16).  The extra upper bus bits will be floating.
 
-*** Memory Usage v#1 (Current mem = 618.184M, initial mem = 170.848M) ***
-*** End netlist parsing (cpu=0:00:00.2, real=0:00:00.0, mem=618.2M) ***
-Top level cell is cpu_z80.
+*** Memory Usage v#1 (Current mem = 617.691M, initial mem = 173.871M) ***
+*** End netlist parsing (cpu=0:00:00.2, real=0:00:00.0, mem=617.7M) ***
+Top level cell is top.
 ** Removed 1 unused lib cells.
 **WARN: (IMPTS-282):	Cell 'BT8SP' is not a level shifter cell but has 'input_signal_level' and 'output_signal_level' specified on pins, or it has different related_power_pin specified on input and output pins. To mark this cell as level shifter, use 'is_level_shifter' attribute.
 Type 'man IMPTS-282' for more detail.
@@ -2265,15 +2268,18 @@ To increase the message display limit, refer to the product command reference ma
 Hooked 1224 DB cells to tlib cells.
 Starting recursive module instantiation check.
 No recursion found.
-Building hierarchical netlist for Cell cpu_z80 ...
+Building hierarchical netlist for Cell top ...
 *** Netlist is unique.
-** info: there are 1277 modules.
-** info: there are 2672 stdCell insts.
+** info: there are 1279 modules.
+** info: there are 2468 stdCell insts.
+** info: there are 52 Pad insts.
 
-*** Memory Usage v#1 (Current mem = 633.934M, initial mem = 170.848M) ***
+*** Memory Usage v#1 (Current mem = 633.441M, initial mem = 173.871M) ***
 Set Default Net Delay as 1000 ps.
 Set Default Net Load as 0.5 pF. 
 Set Default Input Pin Transition as 0.1 ps.
+Initializing I/O assignment ...
+Adjusting Core to Left to: 0.0400. Core to Bottom to: 0.4200.
 **WARN: (IMPFP-3961):	The techSite 'io_site_5V' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
 Type 'man IMPFP-3961' for more detail.
 Initializing multi-corner RC extraction with 1 active RC Corners ...
@@ -2301,21 +2307,35 @@ Summary of Active RC-Corners :
     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 
     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 
 *Info: initialize multi-corner CTS.
-Reading timing constraints file 'innovus//busca_padrao.default_emulate_constraint_mode.sdc' ...
-Current (total cpu=0:00:30.8, real=0:00:59.0, peak res=313.8M, current mem=735.7M)
-cpu_z80
-cpu_z80
-**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//busca_padrao.default_emulate_constraint_mode.sdc, Line 1583).
+Reading timing constraints file 'innovus//NextZ80.default_emulate_constraint_mode.sdc' ...
+Current (total cpu=0:00:25.1, real=0:00:31.0, peak res=344.3M, current mem=740.7M)
+**WARN: (TCLCMD-1041):	current_design should use the top cell as a argument (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 13).
 
-**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//busca_padrao.default_emulate_constraint_mode.sdc, Line 1584).
+top
+top
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'ADDR[15]' (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 32).
 
-**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//busca_padrao.default_emulate_constraint_mode.sdc, Line 1593).
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'ADDR[15]' (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 32).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports or nets' that match '' (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 32).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'ADDR[15]' (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 33).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'ADDR[15]' (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 33).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports or nets' that match '' (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 33).
+
+**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 114).
+
+**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 115).
+
+**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 124).
 
 Number of path exceptions in the constraint file = 1
 Number of paths exceptions after getting compressed = 1
-INFO (CTE): Reading of timing constraints file innovus//busca_padrao.default_emulate_constraint_mode.sdc completed, with 3 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.2, real=0:00:00.0, peak res=330.9M, current mem=752.9M)
-Current (total cpu=0:00:31.0, real=0:00:59.0, peak res=330.9M, current mem=752.9M)
+INFO (CTE): Reading of timing constraints file innovus//NextZ80.default_emulate_constraint_mode.sdc completed, with 6 Warnings and 4 Errors.
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:01.0, peak res=361.3M, current mem=757.9M)
+Current (total cpu=0:00:25.3, real=0:00:32.0, peak res=361.3M, current mem=757.9M)
 **WARN: (TA-976):	Path groups asserted by the group_path constraint are considered by the software to be global in nature - they cannot be restricted to specific constraint modes. Due to this restriction, the group_path constraint is not supported directly in the constraint files which are configured in mode-specific commands such as create_constraint_mode. The current group_path entry will be ignored. You can enter the group_path constraint interactively or as part of a general command script -  where it will be interpreted as global and will be in effect for all modes.
 Total number of combinational cells: 511
 Total number of sequential cells: 234
@@ -2339,24 +2359,326 @@ List of identified usable delay cells: BUCX12 BUCX16 BUCX20 BUCX4 BUCX6 BUCX8 DL
 Total number of identified usable delay cells: 14
 List of identified unusable delay cells:
 Total number of identified unusable delay cells: 0
+Reading IO assignment file "iopads.io" ...
+default_emulate_view
+default_emulate_view
+default_emulate_view
+**Warn: ignored IO file "iopads.io" line 11: Pad: IOPADS_INST/PAD_reset_i W ICP
+  Reason: duplicate specification.
+**WARN: (IMPFP-710):	File version 0 is too old.
+IO file version '0' is too old, will try to place io cell any way.
+**WARN: (IMPFP-780):	IO instance 'IOPADS_INST/PAD_int_i' isn't defined in IO file, io placement might be incorrect.
+**WARN: (IMPFP-780):	IO instance 'IOPADS_INST/PAD_nmi_i' isn't defined in IO file, io placement might be incorrect.
+**WARN: (IMPFP-780):	IO instance 'IOPADS_INST/PAD_wait_i' isn't defined in IO file, io placement might be incorrect.
+WARNING (IMPFP-3997): The Floorplan box has been changed from {(0.000 , 0.000) (1294.000 , 2082.000)} to {(-60.000 , 0.000) (1354.000 , 2082.000)}.
+**WARN: (IMPFP-3108):	The tool will relocate the IOs because of not enough space to accommodate the IOs for side 'N' between IOs 'IOPADS_INST/PAD_addr4_o' and 'IOPADS_INST/PAD_addr5_o'.
+IO: IOPADS_INST/PAD_int_i has offset specified but is not the first IO for side N
+**WARN: (IMPFP-3108):	The tool will relocate the IOs because of not enough space to accommodate the IOs for side 'N' between IOs 'IOPADS_INST/PAD_addr6_o' and 'IOPADS_INST/PAD_addr6_o'.
+IO: IOPADS_INST/PAD_nmi_i has offset specified but is not the first IO for side N
+**WARN: (IMPFP-3108):	The tool will relocate the IOs because of not enough space to accommodate the IOs for side 'N' between IOs 'IOPADS_INST/PAD_addr7_o' and 'IOPADS_INST/PAD_addr7_o'.
+IO: IOPADS_INST/PAD_wait_i has offset specified but is not the first IO for side N
 Adjusting coreMargin left    to finFet grid (PlacementGrid) : after adjusting :3.15
-default_emulate_view
-default_emulate_view
-default_emulate_view
 Adjusting coreMargin bottom  to finFet grid (PlacementGrid) : after adjusting :3.05
 Adjusting coreMargin right   to finFet grid (PlacementGrid) : after adjusting :3.15
 Adjusting coreMargin top     to finFet grid (PlacementGrid) : after adjusting :3.05
-Adjusting core size to PlacementGrid : width :263.34 height : 253.76
+Adjusting core size to PlacementGrid : width :278.46 height : 268.4
+Adjusting Core to Left to: 3.1900. Core to Bottom to: 3.4700.
 **WARN: (IMPFP-325):	Floorplan of the design is resized. All current create_floorplan objects are automatically derived based on specified new create_floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
-[DEV]innovus 2> cat physical/2_power_plan.tcl
-[DEV]innovus 3> delete_global_net_connections
-[DEV]innovus 4> connect_global_net vdd -type pg_pin -pin_base_name vdd -inst_base_name *
-**ERROR: (IMPDB-1221):	A global net connection rule was specified to connect power pins with the name pattern 'vdd' to a global net.  But the connections cannot be made because there is no such power pin with name matching the pattern in any cell.  Check the pin name pattern and make sure it is correct.
-[DEV]innovus 5> ls
-[DEV]innovus 6> **INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
-exit
+[DEV]innovus 2> source physical/2_power_plan.tcl 
+**WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddRingMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddRingMode -stacked_via_top_layer layerName"..
+**WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddRingMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddRingMode -stacked_via_bottom_layer layerName"..
 
-*** Memory Usage v#1 (Current mem = 946.922M, initial mem = 170.848M) ***
-*** Message Summary: 2449 warning(s), 1 error(s)
+The power planner created 8 wires.
+*** Ending Ring Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 945.9M) ***
+*** Begin SPECIAL ROUTE on Thu Apr  7 22:32:13 2022 ***
+SPECIAL ROUTE ran on directory: /home/gme/jonas.gava/2022/cci2/next_z80/nextz80/trunk/synthesis
+SPECIAL ROUTE ran on machine: pgmicro04 (Linux 3.10.0-1160.42.2.el7.x86_64 Xeon 1.20Ghz)
 
---- Ending "Innovus" (totcpu=0:01:22, real=0:05:25, mem=946.9M) ---
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "gnd vdd"
+routeSpecial set to true
+srouteBlockPin set to "useLef"
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectConverterPin set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 6
+srouteFollowCorePinEnd set to 3
+srouteJogControl set to "preferWithChanges differentLayer"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 6
+srouteTopTargetLayerLimit set to 6
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1577.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 12 layers, 6 routing layers, 1 overlap layer
+Read in 831 macros, 118 used
+Read in 156 components
+  104 core components: 104 unplaced, 0 placed, 0 fixed
+  52 pad components: 0 unplaced, 3 placed, 49 fixed
+Read in 41 logical pins
+Read in 41 nets
+Read in 7 special nets, 2 routed
+Read in 55 terminals
+2 nets selected.
+
+Begin power routing ...
+**WARN: (IMPSR-1253):	Cannot find any standard cell pin connected to net vdd.
+Run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND'.
+**WARN: (IMPSR-1254):	Cannot find any block pin of net vdd. Check netlist, or change option to include the pin.
+**WARN: (IMPSR-1253):	Cannot find any standard cell pin connected to net gnd.
+Run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND'.
+**WARN: (IMPSR-1254):	Cannot find any block pin of net gnd. Check netlist, or change option to include the pin.
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net vdd.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net vdd.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+CPU time for FollowPin 0 seconds
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net gnd.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net gnd.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+CPU time for FollowPin 0 seconds
+  Number of IO ports routed: 56  open: 4
+  Number of Block ports routed: 0
+  Number of Stripe ports routed: 0
+  Number of Core ports routed: 260  open: 4
+  Number of Pad ports routed: 0
+  Number of Power Bump ports routed: 0
+  Number of Pad Ring connections: 245
+  Number of Followpin connections: 133
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 1593.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 45 via definition ...Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+
+
+sroute post-processing starts at Thu Apr  7 22:32:13 2022
+The viaGen is rebuilding shadow vias for net gnd.
+sroute post-processing ends at Thu Apr  7 22:32:13 2022
+
+sroute post-processing starts at Thu Apr  7 22:32:13 2022
+The viaGen is rebuilding shadow vias for net vdd.
+sroute post-processing ends at Thu Apr  7 22:32:13 2022
+sroute: Total CPU time used = 0:0:0
+sroute: Total Real time used = 0:0:0
+sroute: Total Memory used = 45.63 megs
+sroute: Total Peak Memory used = 989.57 megs
+[DEV]innovus 3> gui_fit
+place_design
+**ERROR: (IMPSP-9099):	Scan chains exist in this design but are not defined. Placement and timing QoR can be severely impacted in this case!
+It is highly recommend to define scan chains either through input scan def (preferred) or create_scan_chain.
+*** Starting place_design default flow ***
+**INFO: Enable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+Set Default Net Delay as 0 ps.
+Set Default Net Load as 0 pF. 
+**INFO: Analyzing IO path groups for slack adjustment
+Multithreaded Timing Analysis is initialized with 8 threads
+
+Effort level <high> specified for reg2reg_tmp.46349 path_group
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in Single mode...
+siFlow : Timing analysis mode is single, using late cdB files
+End delay calculation. (MEM=1701.71 CPU=0:00:00.8 REAL=0:00:00.0)
+*** CDM Built up (cpu=0:00:01.8  real=0:00:01.0  mem= 1701.7M) ***
+*** Start delete_buffer_trees ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+All-RC-Corners-Per-Net-In-Memory is turned ON...
+Updating netlist
+
+*summary: 46 instances (buffers/inverters) removed
+*** Finish delete_buffer_trees (0:00:00.2) ***
+**INFO: Disable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Deleted 0 physical inst  (cell - / prefix -).
+*** Starting "NanoPlace(TM) placement v#2 (mem=1693.7M)" ...
+**WARN: (IMPTS-403):	Delay calculation was forced to extrapolate table data outside of the characterized range. In some cases, extrapolation can reduce the accuracy of the delay calculation. You can enable more detailed reporting of these cases by enabling the command 'setDelayCalMode -reportOutBound true'.
+Type 'man IMPTS-403' for more detail.
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:05.3 mem=1693.8M) ***
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:06.3 mem=1693.9M) ***
+Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
+**WARN: (IMPSP-9042):	Scan chains were not defined, -ignoreScan option will be ignored.
+Define the scan chains before using this option.
+Type 'man IMPSP-9042' for more detail.
+#std cell=2438 (0 fixed + 2438 movable) #block=0 (0 floating + 0 preplaced)
+#ioInst=52 #net=2554 #term=9424 #term/net=3.69, #fixedIo=52, #floatIo=0, #fixedPin=41, #floatPin=0
+stdCell: 2438 single + 0 double + 0 multi
+Total standard cell length = 10.6413 (mm), area = 0.0519 (mm^2)
+Estimated cell power/ground rail width = 0.915 um
+Average module density = 0.090.
+Density for the design = 0.090.
+       = stdcell_area 16891 sites (51930 um^2) / alloc_area 188343 sites (579041 um^2).
+Pin Density = 0.04997.
+            = total # of pins 9424 / total area 188594.
+Enabling multi-CPU acceleration with 8 CPU(s) for placement
+=== lastAutoLevel = 8 
+Clock gating cells determined by native netlist tracing.
+Iteration  1: Total net bbox = 5.124e+04 (2.70e+04 2.42e+04)
+              Est.  stn bbox = 5.577e+04 (2.94e+04 2.63e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1758.0M
+Iteration  2: Total net bbox = 5.124e+04 (2.70e+04 2.42e+04)
+              Est.  stn bbox = 5.577e+04 (2.94e+04 2.63e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1758.0M
+Iteration  3: Total net bbox = 4.808e+04 (2.54e+04 2.27e+04)
+              Est.  stn bbox = 5.451e+04 (2.87e+04 2.58e+04)
+              cpu = 0:00:00.8 real = 0:00:00.0 mem = 1758.0M
+Iteration  4: Total net bbox = 4.355e+04 (2.30e+04 2.05e+04)
+              Est.  stn bbox = 4.906e+04 (2.58e+04 2.32e+04)
+              cpu = 0:00:00.6 real = 0:00:01.0 mem = 1758.0M
+Iteration  5: Total net bbox = 5.992e+04 (1.86e+04 4.13e+04)
+              Est.  stn bbox = 6.918e+04 (2.05e+04 4.87e+04)
+              cpu = 0:00:01.4 real = 0:00:00.0 mem = 1758.0M
+Iteration  6: Total net bbox = 1.251e+05 (5.07e+04 7.44e+04)
+              Est.  stn bbox = 1.506e+05 (6.10e+04 8.96e+04)
+              cpu = 0:00:03.6 real = 0:00:01.0 mem = 1790.0M
+
+Iteration  7: Total net bbox = 1.271e+05 (5.23e+04 7.48e+04)
+              Est.  stn bbox = 1.527e+05 (6.26e+04 9.01e+04)
+              cpu = 0:00:00.3 real = 0:00:00.0 mem = 1790.0M
+Iteration  8: Total net bbox = 1.271e+05 (5.23e+04 7.48e+04)
+              Est.  stn bbox = 1.527e+05 (6.26e+04 9.01e+04)
+              cpu = 0:00:02.2 real = 0:00:01.0 mem = 1790.0M
+Iteration  9: Total net bbox = 1.410e+05 (6.89e+04 7.20e+04)
+              Est.  stn bbox = 1.692e+05 (8.28e+04 8.64e+04)
+              cpu = 0:00:04.1 real = 0:00:01.0 mem = 1790.0M
+Iteration 10: Total net bbox = 1.410e+05 (6.89e+04 7.20e+04)
+              Est.  stn bbox = 1.692e+05 (8.28e+04 8.64e+04)
+              cpu = 0:00:02.2 real = 0:00:02.0 mem = 1790.0M
+Iteration 11: Total net bbox = 1.448e+05 (7.42e+04 7.06e+04)
+              Est.  stn bbox = 1.732e+05 (8.87e+04 8.45e+04)
+              cpu = 0:00:02.8 real = 0:00:01.0 mem = 1790.0M
+Iteration 12: Total net bbox = 1.448e+05 (7.42e+04 7.06e+04)
+              Est.  stn bbox = 1.732e+05 (8.87e+04 8.45e+04)
+              cpu = 0:00:02.2 real = 0:00:01.0 mem = 1790.0M
+Iteration 13: Total net bbox = 1.459e+05 (7.59e+04 7.00e+04)
+              Est.  stn bbox = 1.737e+05 (9.04e+04 8.33e+04)
+              cpu = 0:00:02.8 real = 0:00:01.0 mem = 1790.0M
+Iteration 14: Total net bbox = 1.459e+05 (7.59e+04 7.00e+04)
+              Est.  stn bbox = 1.737e+05 (9.04e+04 8.33e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1790.0M
+*** cost = 1.459e+05 (7.59e+04 7.00e+04) (cpu for global=0:00:23.6) real=0:00:10.0***
+Placement multithread real runtime: 0:00:10.0 with 8 threads.
+Info: 38 clock gating cells identified, 37 (on average) moved
+top
+top
+Core Placement runtime cpu: 0:00:16.1 real: 0:00:06.0
+*** Starting refinePlace (0:01:59 mem=1396.2M) ***
+Total net length = 1.459e+05 (7.591e+04 6.998e+04) (ext = 0.000e+00)
+Density distribution unevenness ratio = 78.976%
+Move report: Detail placement moves 2438 insts, mean move: 3.42 um, max move: 49.14 um
+	Max move on inst (top_INST/CPU_REGS_regs_hi_RC_CG_HIER_INST17/g13): (688.30, 788.43) --> (640.08, 787.51)
+	Runtime: CPU: 0:00:00.7 REAL: 0:00:00.0 MEM: 1407.3MB
+Summary Report:
+Instances move: 2438 (out of 2438 movable)
+Mean displacement: 3.42 um
+Max displacement: 49.14 um (Instance: top_INST/CPU_REGS_regs_hi_RC_CG_HIER_INST17/g13) (688.299, 788.429) -> (640.08, 787.51)
+	Length: 4 sites, height: 1 rows, site name: core, cell type: AND2X1
+Total net length = 1.420e+05 (7.193e+04 7.010e+04) (ext = 0.000e+00)
+Runtime: CPU: 0:00:00.8 REAL: 0:00:00.0 MEM: 1407.3MB
+*** Finished refinePlace (0:01:59 mem=1407.3M) ***
+Total net length = 1.418e+05 (7.180e+04 7.001e+04) (ext = 0.000e+00)
+*** End of Placement (cpu=0:00:33.0, real=0:00:19.0, mem=1407.3M) ***
+default core: bins with density >  0.75 = 0.376 % ( 1 / 266 )
+Density distribution unevenness ratio = 78.976%
+*** Free Virtual Timing Model ...(mem=1407.3M)
+Starting IO pin assignment...
+UM:  flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:                                                                   final
+     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:                                                                   global_place
+congRepair running 8 threads
+Starting congestion repair ...
+[NR-eagl] buildTerm2TermWires    : 1
+[NR-eagl] doTrackAssignment      : 1
+[NR-eagl] numThreads             : 1
+[NR-eagl] honorMsvRouteConstraint: false
+[NR-eagl] honorClockSpecNDR      : 0
+[NR-eagl] minRouteLayer          : 2
+[NR-eagl] maxRouteLayer          : 2147483647
+[NR-eagl] numTracksPerClockWire  : 0
+[NR-eagl] Layer1 has no routable track
+[NR-eagl] Layer2 has single uniform track structure
+[NR-eagl] Layer3 has single uniform track structure
+[NR-eagl] Layer4 has single uniform track structure
+[NR-eagl] Layer5 has single uniform track structure
+[NR-eagl] Layer6 has single uniform track structure
+[NR-eagl] numViaLayers=5
+[NR-eagl] numRoutingBlks=0 numInstBlks=5600 numPGBlocks=590 numBumpBlks=0 numBoundaryFakeBlks=0
+[NR-eagl] numPreroutedNet = 0  numPreroutedWires = 0
+[NR-eagl] Read numTotalNets=2554  numIgnoredNets=0
+[NR-eagl] There are 38 clock nets ( 0 with NDR ).
+[NR-eagl] EstWL : 33911
+
+[NR-eagl] Usage: 33916 = (16761 H, 17155 V) = (3.69% H, 3.77% V) = (8.179e+04um H, 8.372e+04um V)
+[NR-eagl] 
+[NR-eagl] Usage: 33916 = (16761 H, 17155 V) = (3.69% H, 3.77% V) = (8.179e+04um H, 8.372e+04um V)
+[NR-eagl] 
+[NR-eagl] earlyGlobalRoute overflow: 0.00% H + 0.00% V
+
+[NR-eagl] Usage: 33916 = (16761 H, 17155 V) = (3.69% H, 3.77% V) = (8.179e+04um H, 8.372e+04um V)
+[NR-eagl] 
+[NR-eagl] Usage: 33916 = (16761 H, 17155 V) = (3.69% H, 3.77% V) = (8.179e+04um H, 8.372e+04um V)
+[NR-eagl] 
+[NR-eagl] Usage: 33916 = (16761 H, 17155 V) = (3.69% H, 3.77% V) = (8.179e+04um H, 8.372e+04um V)
+[NR-eagl] 
+[NR-eagl] earlyGlobalRoute overflow: 0.00% H + 0.00% V
+
+[NR-eagl] Overflow after earlyGlobalRoute (GR compatible) 0.00% H + 0.00% V
+[NR-eagl] Overflow after earlyGlobalRoute 0.00% H + 0.00% V
+
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+describeCongestion: hCong = 0.00 vCong = 0.00
+Skipped repairing congestion.
+[NR-eagl] Layer1(MET1)(F) length: 0.000000e+00um, number of vias: 9342
+[NR-eagl] Layer2(MET2)(V) length: 5.232488e+04um, number of vias: 13123
+[NR-eagl] Layer3(MET3)(H) length: 6.374901e+04um, number of vias: 1910
+[NR-eagl] Layer4(MET4)(V) length: 3.219182e+04um, number of vias: 712
+[NR-eagl] Layer5(MET5)(H) length: 1.978496e+04um, number of vias: 46
+[NR-eagl] Layer6(METTP)(V) length: 2.083150e+03um, number of vias: 0
+[NR-eagl] Total length: 1.701338e+05um, number of vias: 25133
+End of congRepair (cpu=0:00:00.3, real=0:00:00.0)
+*** Finishing place_design default flow ***
+**ERROR: (IMPSP-9099):	Scan chains exist in this design but are not defined. Placement and timing QoR can be severely impacted in this case!
+It is highly recommend to define scan chains either through input scan def (preferred) or create_scan_chain.
+***** Total cpu  0:0:36
+***** Total real time  0:0:22
+**place_design ... cpu = 0: 0:36, real = 0: 0:22, mem = 1354.0M **
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPTS-403            1  Delay calculation was forced to extrapol...
+WARNING   IMPDC-1629           1  The default delay limit was set to %d. T...
+WARNING   IMPSP-9042           1  Scan chains were not defined, -ignoreSca...
+ERROR     IMPSP-9099           2  Scan chains exist in this design but are...
+*** Message Summary: 3 warning(s), 2 error(s)
+
+     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:                                                                   final
+WARNING: the TCL for metric messages failed. (error:can't read "last_error_message": no such variable)
+default_emulate_view
+     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:         94.84            295                                      place_design

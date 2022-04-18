@@ -11,11 +11,19 @@
 ##Place the design
 place_design
 
+#ccopt_design 
+# Pre-CTS opt
 opt_design -pre_cts
 
+#time_design -pre_cts
+
+# CTS
 eval_legacy {setCTSMode -engine ck}
+#eval_legacy {clockDesign -genSpecOnly Clock.ctstch}
 eval_legacy {clockDesign -specFile Clock.ctstch -outDir clk_report}
 
+# Post-CTS opt
 opt_design -post_cts
 
 report_timing
+eval_legacy {timeDesign -postCTS}

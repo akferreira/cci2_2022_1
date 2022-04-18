@@ -1,46 +1,39 @@
 
 Cadence Innovus(TM) Implementation System.
-Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
 
-Version:	v15.20-p005_1, built Wed Nov 11 11:16:39 PST 2015
+Version:	v16.17-s018_1, built Thu Aug 31 09:57:10 PDT 2017
 Options:	-common_ui 
-Date:		Tue Mar  1 19:32:45 2022
+Date:		Mon Apr 11 11:59:55 2022
 Host:		pgmicro01 (x86_64 w/Linux 3.10.0-1160.6.1.el7.x86_64) (10cores*40cpus*Intel(R) Xeon(R) CPU E5-2650L v2 @ 1.70GHz 25600KB)
 OS:		CentOS Linux release 7.9.2009 (Core)
 
 License:
-		invs	Innovus Implementation System	15.2	checkout succeeded
+		invs	Innovus Implementation System	16.1	checkout succeeded
 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
-Create and set the environment variable TMPDIR to /tmp/innovus_temp_32757_pgmicro01_arthur.ferreira_LLGJpk.
+
+***************************************************************************************
+INFO:    You have enabled the Common UI that has been internally qualified at Cadence but
+         has only limited customer testing. You are encouraged to work with Cadence directly
+         to qualify your usage and make sure it meets your needs before deploying it widely.
+***************************************************************************************
+
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_11566_pgmicro01_arthur.ferreira_sNwUzy.
 
 
 **INFO:  MMMC transition support version v31-84 
 
 Loading fill procedures ...
-[DEV]innovus 1> help
-
-Usage: help [-help] <pattern1> [<pattern2>] [-category <string>] [-detail  | -summary ] [-command  | -attribute  | -obj  | -message ]
-
-**ERROR: (IMPTCM-46):	Argument "pattern1" is required for command "help", either this option is not specified or an option prior to it is not specified correctly.
-  
-[DEV]innovus 2> Save_design
-invalid command name "Save_design"
-[DEV]innovus 3> Save_Design
-invalid command name "Save_Design"
-[DEV]innovus 4> SaveDesign
-invalid command name "SaveDesign"
-[DEV]innovus 5> Save-Design
-invalid command name "Save-Design"
-[DEV]innovus 6> source physical/1_init.tcl
+[DEV]innovus 1> source physical/1_init.tcl
 Starting library reading in 'Multi-threaded flow' (with '8' threads)
 
 Threads Configured:8
 Reading default_emulate_libset_max timing library /pdk/xfab/XC018_61_3.1.3/synopsys/xc018/MOSST/D_CELLS_MOSST_typ_1_80V_25C.lib.
-**WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'SIG' of cell 'SIGNALHOLD' is not defined in the library.
-Read 811 cells in  D_CELLS_MOSST_typ_1_80V_25C.
+**WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'SIG' of cell 'SIGNALHOLD' is not defined in the library. (File /pdk/xfab/XC018_61_3.1.3/synopsys/xc018/MOSST/D_CELLS_MOSST_typ_1_80V_25C.lib)
+Read 811 cells in D_CELLS_MOSST_typ_1_80V_25C.
 Reading default_emulate_libset_max timing library /pdk/xfab/XC018_61_3.1.3/synopsys/xc018/MOS5ST/IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C.lib.
-Read 414 cells in  IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C.
-Library reading multithread flow ended.
+Read 414 cells in IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C.
+Library reading multithread flow ended. (File /pdk/xfab/XC018_61_3.1.3/synopsys/xc018/MOSST/D_CELLS_MOSST_typ_1_80V_25C.lib)
 
 Loading LEF file /pdk/xfab/XC018_61_3.1.3/cadence/xc018/LEF/xc018_m6_FE/xc018m6_FE.lef ...
 
@@ -133,9 +126,10 @@ Type 'man IMPLF-201' for more detail.
 **WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
 To increase the message display limit, refer to the product command reference manual.
 
-viaInitial starts at Tue Mar  1 19:34:43 2022
-viaInitial ends at Tue Mar  1 19:34:43 2022
-*** Begin netlist parsing (mem=615.3M) ***
+viaInitial starts at Mon Apr 11 12:04:09 2022
+viaInitial ends at Mon Apr 11 12:04:09 2022
+#- Begin Load netlist data ... (date=04/11 12:04:09, mem=585.4M)
+*** Begin netlist parsing (mem=585.4M) ***
 **WARN: (IMPVL-159):	Pin '\gnd! ' of cell 'FEEDCAP25LP' is defined in LEF but not in the timing library.
 **WARN: (IMPVL-159):	Pin '\vdd! ' of cell 'FEEDCAP25LP' is defined in LEF but not in the timing library.
 **WARN: (IMPVL-159):	Pin '\gnd! ' of cell 'FEEDCAP25' is defined in LEF but not in the timing library.
@@ -2228,12 +2222,12 @@ Pin 'VDDR' of cell 'APR00DP' is declared as power/ground in LEF but as signal in
 Created 1225 new cells from 2 timing libraries.
 Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
-Reading verilog netlist 'innovus/busca_padrao.v'
+Reading verilog netlist 'innovus/NextZ80.v'
 
-*** Memory Usage v#1 (Current mem = 615.332M, initial mem = 170.848M) ***
-*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=615.3M) ***
-Top level cell is cpu_z80.
-** Removed 1 unused lib cells.
+*** Memory Usage v#1 (Current mem = 585.391M, initial mem = 172.996M) ***
+*** End netlist parsing (cpu=0:00:00.2, real=0:00:00.0, mem=585.4M) ***
+#- End Load netlist data ... (date=04/11 12:04:09, total cpu=0:00:00.2, real=0:00:00.0, peak res=585.4M, current mem=585.4M)
+Top level cell is top.
 **WARN: (IMPTS-282):	Cell 'BT8SP' is not a level shifter cell but has 'input_signal_level' and 'output_signal_level' specified on pins, or it has different related_power_pin specified on input and output pins. To mark this cell as level shifter, use 'is_level_shifter' attribute.
 Type 'man IMPTS-282' for more detail.
 **WARN: (IMPTS-282):	Cell 'BT8SMP' is not a level shifter cell but has 'input_signal_level' and 'output_signal_level' specified on pins, or it has different related_power_pin specified on input and output pins. To mark this cell as level shifter, use 'is_level_shifter' attribute.
@@ -2276,22 +2270,27 @@ Type 'man IMPTS-282' for more detail.
 Type 'man IMPTS-282' for more detail.
 **WARN: (EMS-27):	Message (IMPTS-282) has exceeded the current message display limit of 20.
 To increase the message display limit, refer to the product command reference manual.
-Hooked 1224 DB cells to tlib cells.
+Hooked 1225 DB cells to tlib cells.
+** Removed 1 unused lib cells.
 Starting recursive module instantiation check.
 No recursion found.
-Building hierarchical netlist for Cell cpu_z80 ...
+Building hierarchical netlist for Cell top ...
 *** Netlist is unique.
-** info: there are 1277 modules.
-** info: there are 2672 stdCell insts.
+** info: there are 1279 modules.
+** info: there are 2825 stdCell insts.
+** info: there are 52 Pad insts.
 
-*** Memory Usage v#1 (Current mem = 631.082M, initial mem = 170.848M) ***
+*** Memory Usage v#1 (Current mem = 605.141M, initial mem = 172.996M) ***
 Set Default Net Delay as 1000 ps.
 Set Default Net Load as 0.5 pF. 
 Set Default Input Pin Transition as 0.1 ps.
-**WARN: (IMPFP-3961):	The techSite 'io_site_5V' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Initializing I/O assignment ...
+Adjusting Core to Left to: 0.0400. Core to Bottom to: 0.4200.
+**WARN: (IMPFP-3961):	The techSite 'io_site_5V' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
 Type 'man IMPFP-3961' for more detail.
-Initializing multi-corner RC extraction with 1 active RC Corners ...
 default_emulate_view
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
 Reading Capacitance Table File /pdk/xfab/XC018_61_3.1.3/cadence/xc018/LEF/xc018_m6_FE/xc018m6_typ.capTbl ...
 Cap table was created using Encounter 07.10-s219_1.
 Process name: xc018m6_typ.
@@ -2315,23 +2314,25 @@ Summary of Active RC-Corners :
     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 
     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 
 *Info: initialize multi-corner CTS.
-Reading timing constraints file 'innovus//busca_padrao.default_emulate_constraint_mode.sdc' ...
-Current (total cpu=0:00:42.1, real=0:02:00, peak res=316.1M, current mem=735.1M)
-cpu_z80
-cpu_z80
-**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//busca_padrao.default_emulate_constraint_mode.sdc, Line 1583).
+Reading timing constraints file 'innovus//NextZ80.default_emulate_constraint_mode.sdc' ...
+Current (total cpu=0:01:08, real=0:04:15, peak res=306.2M, current mem=718.5M)
+**WARN: (TCLCMD-1041):	current_design should use the top cell as a argument (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 13).
 
-**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//busca_padrao.default_emulate_constraint_mode.sdc, Line 1584).
+top
+**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 114).
 
-**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//busca_padrao.default_emulate_constraint_mode.sdc, Line 1593).
+top
+**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 115).
+
+**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//NextZ80.default_emulate_constraint_mode.sdc, Line 124).
 
 Number of path exceptions in the constraint file = 1
 Number of paths exceptions after getting compressed = 1
-INFO (CTE): Reading of timing constraints file innovus//busca_padrao.default_emulate_constraint_mode.sdc completed, with 3 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.2, real=0:00:00.0, peak res=332.9M, current mem=750.9M)
-Current (total cpu=0:00:42.3, real=0:02:00, peak res=332.9M, current mem=750.9M)
+INFO (CTE): Reading of timing constraints file innovus//NextZ80.default_emulate_constraint_mode.sdc completed, with 4 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.2, real=0:00:01.0, peak res=323.5M, current mem=735.7M)
+Current (total cpu=0:01:08, real=0:04:16, peak res=323.5M, current mem=735.7M)
 **WARN: (TA-976):	Path groups asserted by the group_path constraint are considered by the software to be global in nature - they cannot be restricted to specific constraint modes. Due to this restriction, the group_path constraint is not supported directly in the constraint files which are configured in mode-specific commands such as create_constraint_mode. The current group_path entry will be ignored. You can enter the group_path constraint interactively or as part of a general command script -  where it will be interpreted as global and will be in effect for all modes.
-Total number of combinational cells: 511
+Total number of combinational cells: 512
 Total number of sequential cells: 234
 Total number of tristate cells: 64
 Total number of level shifter cells: 0
@@ -2353,72 +2354,34 @@ List of identified usable delay cells: BUCX12 BUCX16 BUCX20 BUCX4 BUCX6 BUCX8 DL
 Total number of identified usable delay cells: 14
 List of identified unusable delay cells:
 Total number of identified unusable delay cells: 0
+default_emulate_view
+default_emulate_view
+default_emulate_view
+Reading IO assignment file "iopads.io" ...
+**Warn: ignored IO file "iopads.io" line 11: Pad: IOPADS_INST/PAD_reset_i W ICP
+  Reason: duplicate specification.
+**WARN: (IMPFP-710):	File version 0 is too old.
+IO file version '0' is too old, will try to place io cell any way.
+**WARN: (IMPFP-780):	IO instance 'IOPADS_INST/PAD_int_i' isn't defined in IO file, io placement might be incorrect.
+**WARN: (IMPFP-780):	IO instance 'IOPADS_INST/PAD_nmi_i' isn't defined in IO file, io placement might be incorrect.
+**WARN: (IMPFP-780):	IO instance 'IOPADS_INST/PAD_wait_i' isn't defined in IO file, io placement might be incorrect.
+WARNING (IMPFP-3997): The Floorplan box has been changed from {(0.000 , 0.000) (1294.000 , 2082.000)} to {(-60.000 , 0.000) (1354.000 , 2082.000)}.
+**WARN: (IMPFP-3108):	The tool will relocate the IOs because of not enough space to accommodate the IOs for side 'N' between IOs 'IOPADS_INST/PAD_addr4_o' and 'IOPADS_INST/PAD_addr5_o'.
+IO: IOPADS_INST/PAD_int_i has offset specified but is not the first IO for side N
+**WARN: (IMPFP-3108):	The tool will relocate the IOs because of not enough space to accommodate the IOs for side 'N' between IOs 'IOPADS_INST/PAD_addr6_o' and 'IOPADS_INST/PAD_addr6_o'.
+IO: IOPADS_INST/PAD_nmi_i has offset specified but is not the first IO for side N
+**WARN: (IMPFP-3108):	The tool will relocate the IOs because of not enough space to accommodate the IOs for side 'N' between IOs 'IOPADS_INST/PAD_addr7_o' and 'IOPADS_INST/PAD_addr7_o'.
+IO: IOPADS_INST/PAD_wait_i has offset specified but is not the first IO for side N
 Adjusting coreMargin left    to finFet grid (PlacementGrid) : after adjusting :3.15
-default_emulate_view
-default_emulate_view
-default_emulate_view
 Adjusting coreMargin bottom  to finFet grid (PlacementGrid) : after adjusting :3.05
 Adjusting coreMargin right   to finFet grid (PlacementGrid) : after adjusting :3.15
 Adjusting coreMargin top     to finFet grid (PlacementGrid) : after adjusting :3.05
-Adjusting core size to PlacementGrid : width :263.34 height : 253.76
+Adjusting core size to PlacementGrid : width :284.76 height : 283.04
+Adjusting Core to Left to: 3.1900. Core to Bottom to: 3.4700.
 **WARN: (IMPFP-325):	Floorplan of the design is resized. All current create_floorplan objects are automatically derived based on specified new create_floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
-[DEV]innovus 7> source physical/2_power_plan.tcl
+[DEV]innovus 2> exit
 
-**WARN: (IMPPP-136):	The currently specified left spacing 0.2500  is less than the required spacing 0.2800 for widths specified as 0.5000 and 0.5000.
-**WARN: (IMPPP-136):	The currently specified right spacing 0.2500  is less than the required spacing 0.2800 for widths specified as 0.5000 and 0.5000.
-The power planner created 8 wires.
-*** Ending Ring Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 939.4M) ***
-**ERROR: (IMPSR-4060):	No layer found by lef layer named AP.
-**ERROR: (IMPSR-4060):	No layer found by lef layer named AP.
-Estimated cell power/ground rail width = 0.610 um
-**WARN: (IMPSP-5134):	Setting cellInterval to 19.530 (microns) as a multiple of cell FEED1'sType 'man IMPSP-5134' for more detail.
-**WARN: (IMPSP-5134):	Setting inRowOffset to 7.560 (microns) as a multiple of cell FEED1'sType 'man IMPSP-5134' for more detail.
-For 728 new insts, *** Applied 0 GNC rules (cpu = 0:00:00.0)
-Inserted 728 well-taps <FEED1> cells (prefix WELLTAP).
-**WARN: (IMPPP-4063):	Multi-CPU is set to 4 in add_stripes.  When the number of CPU in set_multi_cpu_usage is more than 4, add_stripes gets worse runtime caused by data exchange and other time consuming operations
+*** Memory Usage v#1 (Current mem = 927.227M, initial mem = 172.996M) ***
+*** Message Summary: 2462 warning(s), 0 error(s)
 
-Starting stripe generation ...
-Non-Default setAddStripeOption Settings :
-  NONE
-**WARN: (IMPPP-4055):	The run time of add_stripes will degrade with multiple cpu setting according to the number of stripe sets, ingore the setting of set_multi_cpu_usage in add_stripes.
-**WARN: (IMPPP-354):	The power planner did not generate vertical stripe at 3.40 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
-Stripe generation is complete; vias are now being generated.
-The power planner created 21 wires.
-*** Ending Stripe Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 974.4M) ***
-[DEV]innovus 8> eval_legacy { report_message -start_cmd }
-eval_legacy { report_message -start_cmd }
-get_multi_cpu_usage -local_cpu
-write_netlist cpu_z80_p2/cpu_z80.v.gz
-Writing Netlist "cpu_z80_p2/cpu_z80.v.gz" ...
-Saving AAE Data ...
-get_proto_model -type_match {none flex_module flex_instgroup blackbox full optinterface} -tcl -name
-get_proto_model -type_match {flex_module flex_instgroup} -committed -name -tcl
-Saving preference file cpu_z80_p2/gui.pref.tcl ...
-get_layer_preference congestH -is_visible
-get_layer_preference congestV -is_visible
-get_layer_preference congestObj -is_visible
-Saving root attributes to be loaded post write_db ...
-Saving root attributes to be loaded previous write_db ...
-Saving floorplan file ...
-write_floorplan cpu_z80_p2/cpu_z80.fp.gz
-write_black_box_lef -all cpu_z80_p2/cpu_z80.bbox.lef
-write_drc_markers cpu_z80_p2/cpu_z80.marker.gz
-Saving Drc markers ...
-... No Drc file written since there is no markers found.
-Saving placement file ...
-Saving route file ...
-*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=977.6M) ***
-Saving DEF file ...
-eval_legacy { defOut -for_saveDesign cpu_z80_p2/cpu_z80.def.gz }
-eval_legacy { writeIntegRouteConstraint -noDigitalConstraint -file cpu_z80_p2/cpu_z80.integ.const }
-No integration constraint in the design.
-eval_legacy { is_attribute -obj_type root write_db_create_read_file }
-
-
-default_emulate_rc_corner
-
-Generated self-contained design cpu_z80_p2
-eval_legacy { report_message -end_cmd }
-eval_legacy { report_message -end_cmd }
-*** Message Summary: 0 warning(s), 0 error(s)
-
+--- Ending "Innovus" (totcpu=0:01:25, real=0:05:55, mem=927.2M) ---
