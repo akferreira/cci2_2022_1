@@ -6,9 +6,9 @@
 Tracing Clock CLK
 
 ****** Clock Tree (CLK) Structure
-Nr. Subtrees                   : 38
-Nr. Sinks                      : 345
-Nr.          Rising  Sync Pins : 345
+Nr. Subtrees                   : 37
+Nr. Sinks                      : 336
+Nr.          Rising  Sync Pins : 336
 Nr. Inverter Rising  Sync Pins : 0
 Nr.          Falling Sync Pins : 0
 Nr. Inverter Falling Sync Pins : 0
@@ -17,13 +17,19 @@ Nr. Unsync Pins                : 0
 ** Leaf Pins
 CELL (PORT)                            Nr.
 -----------------------------------------------
-SDFRQX2 (C)                             2
-SDFRQX0 (C)                             4
-DFRQX1 (C)                              286
-DLLQX1 (GN)                             37
-DFRX1 (C)                               4
-DFRX2 (C)                               2
-SDFRQX1 (C)                             10
+DFRSQX2 (C)                             1
+DFRX2 (C)                               1
+DFRQX4 (C)                              1
+DFRX4 (C)                               1
+DFRX1 (C)                               1
+DFRSQX4 (C)                             6
+SDFRQX4 (C)                             2
+DFRQX0 (C)                              1
+DLLQX1 (GN)                             36
+SDFRQX0 (C)                             2
+DFRQX2 (C)                              2
+SDFRQX1 (C)                             12
+DFRQX1 (C)                              270
 -----------------------------------------------
 
 
@@ -40,7 +46,7 @@ CELL (PORT)                            Nr.
 ** Gate Component Input Pins
 CELL (PORT)                            Nr.
 -----------------------------------------------
-AND2X1 (A)                              37
+AND2X1 (A)                              36
 -----------------------------------------------
 
 
@@ -49,12 +55,300 @@ AND2X1 (A)                              37
 *DEPTH 0 Input_Pin: (EMPTY) Output_Pin: (CLK) Cell: (EMPTY) Net: (CLK) NO-INV
           Nr. of Exclude Pins           : 0
           Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 38
-          Nr. of     Rising  Sync Pins  : 38
+          Nr. of Total Sync Pins        : 37
+          Nr. of     Rising  Sync Pins  : 37
           Nr. of Inv Rising  Sync Pins  : 0
           Nr. of     Falling Sync Pins  : 0
           Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 37
+          Nr. of Gated Clocks           : 36
+*DEPTH 1 Input_Pin: (CPU_REGS_RC_CG_HIER_INST10/g12/A) Output_Pin: (CPU_REGS_RC_CG_HIER_INST10/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_rc_gclk_1609) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 7
+          Nr. of     Rising  Sync Pins  : 7
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_RC_CG_HIER_INST5/g12/A) Output_Pin: (CPU_REGS_RC_CG_HIER_INST5/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_rc_gclk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 16
+          Nr. of     Rising  Sync Pins  : 16
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_RC_CG_HIER_INST6/g12/A) Output_Pin: (CPU_REGS_RC_CG_HIER_INST6/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_rc_gclk_1601) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 16
+          Nr. of     Rising  Sync Pins  : 16
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_RC_CG_HIER_INST7/g12/A) Output_Pin: (CPU_REGS_RC_CG_HIER_INST7/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_rc_gclk_1603) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_RC_CG_HIER_INST8/g12/A) Output_Pin: (CPU_REGS_RC_CG_HIER_INST8/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_rc_gclk_1605) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_RC_CG_HIER_INST9/g12/A) Output_Pin: (CPU_REGS_RC_CG_HIER_INST9/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_rc_gclk_1607) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST11/g12/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST11/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST12/g12/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST12/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2129) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST13/g12/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST13/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2131) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST14/g12/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST14/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2133) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST15/g12/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST15/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2135) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST17/g12/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST17/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2139) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST18/g12/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST18/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2141) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST19/g12/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST19/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2143) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST20/g12/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST20/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2145) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST22/g12/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST22/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2149) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST23/g12/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST23/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2151) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST24/g12/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST24/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2153) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST26/g12/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST26/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2157) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST27/g12/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST27/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST28/g12/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST28/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2129) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST29/g12/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST29/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2131) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST30/g12/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST30/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2133) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST31/g12/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST31/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2135) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST33/g12/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST33/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2139) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST34/g12/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST34/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2141) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST35/g12/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST35/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2143) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST36/g12/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST36/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2145) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST38/g12/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST38/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2149) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST39/g12/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST39/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2151) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST40/g12/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST40/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2153) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST42/g12/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST42/g12/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2157) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 8
+          Nr. of     Rising  Sync Pins  : 8
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
 *DEPTH 1 Input_Pin: (RC_CG_HIER_INST1/g12/A) Output_Pin: (RC_CG_HIER_INST1/g12/Q) Cell: (AND2X1) Net: (rc_gclk) NO-INV
           Nr. of Exclude Pins           : 0
           Nr. of Unsync Pins            : 0
@@ -64,7 +358,7 @@ AND2X1 (A)                              37
           Nr. of     Falling Sync Pins  : 0
           Nr. of Inv Falling Sync Pins  : 0
           Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (RC_CG_HIER_INST2/g12/A) Output_Pin: (RC_CG_HIER_INST2/g12/Q) Cell: (AND2X1) Net: (rc_gclk_18775) NO-INV
+*DEPTH 1 Input_Pin: (RC_CG_HIER_INST2/g12/A) Output_Pin: (RC_CG_HIER_INST2/g12/Q) Cell: (AND2X1) Net: (rc_gclk_18523) NO-INV
           Nr. of Exclude Pins           : 0
           Nr. of Unsync Pins            : 0
           Nr. of Total Sync Pins        : 4
@@ -73,7 +367,7 @@ AND2X1 (A)                              37
           Nr. of     Falling Sync Pins  : 0
           Nr. of Inv Falling Sync Pins  : 0
           Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (RC_CG_HIER_INST3/g12/A) Output_Pin: (RC_CG_HIER_INST3/g12/Q) Cell: (AND2X1) Net: (rc_gclk_18777) NO-INV
+*DEPTH 1 Input_Pin: (RC_CG_HIER_INST3/g12/A) Output_Pin: (RC_CG_HIER_INST3/g12/Q) Cell: (AND2X1) Net: (rc_gclk_18525) NO-INV
           Nr. of Exclude Pins           : 0
           Nr. of Unsync Pins            : 0
           Nr. of Total Sync Pins        : 3
@@ -82,308 +376,11 @@ AND2X1 (A)                              37
           Nr. of     Falling Sync Pins  : 0
           Nr. of Inv Falling Sync Pins  : 0
           Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (RC_CG_HIER_INST4/g12/A) Output_Pin: (RC_CG_HIER_INST4/g12/Q) Cell: (AND2X1) Net: (rc_gclk_18779) NO-INV
+*DEPTH 1 Input_Pin: (RC_CG_HIER_INST4/g12/A) Output_Pin: (RC_CG_HIER_INST4/g12/Q) Cell: (AND2X1) Net: (rc_gclk_18527) NO-INV
           Nr. of Exclude Pins           : 0
           Nr. of Unsync Pins            : 0
           Nr. of Total Sync Pins        : 3
           Nr. of     Rising  Sync Pins  : 3
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_RC_CG_HIER_INST10/g13/A) Output_Pin: (CPU_REGS_RC_CG_HIER_INST10/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_rc_gclk_1609) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 7
-          Nr. of     Rising  Sync Pins  : 7
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_RC_CG_HIER_INST5/g13/A) Output_Pin: (CPU_REGS_RC_CG_HIER_INST5/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_rc_gclk) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 16
-          Nr. of     Rising  Sync Pins  : 16
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_RC_CG_HIER_INST6/g13/A) Output_Pin: (CPU_REGS_RC_CG_HIER_INST6/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_rc_gclk_1601) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 16
-          Nr. of     Rising  Sync Pins  : 16
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_RC_CG_HIER_INST7/g13/A) Output_Pin: (CPU_REGS_RC_CG_HIER_INST7/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_rc_gclk_1603) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_RC_CG_HIER_INST8/g13/A) Output_Pin: (CPU_REGS_RC_CG_HIER_INST8/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_rc_gclk_1605) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_RC_CG_HIER_INST9/g13/A) Output_Pin: (CPU_REGS_RC_CG_HIER_INST9/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_rc_gclk_1607) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST11/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST11/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST12/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST12/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2129) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST13/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST13/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2131) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST14/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST14/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2133) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST15/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST15/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2135) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST16/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST16/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2137) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST17/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST17/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2139) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST18/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST18/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2141) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST19/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST19/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2143) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST20/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST20/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2145) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST22/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST22/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2149) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST23/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST23/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2151) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST24/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST24/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2153) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST26/g13/A) Output_Pin: (CPU_REGS_regs_hi_RC_CG_HIER_INST26/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_hi_rc_gclk_2157) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST27/g13/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST27/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST28/g13/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST28/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2129) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST29/g13/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST29/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2131) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST30/g13/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST30/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2133) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST31/g13/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST31/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2135) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST33/g13/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST33/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2139) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST34/g13/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST34/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2141) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST35/g13/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST35/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2143) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST36/g13/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST36/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2145) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST38/g13/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST38/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2149) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST39/g13/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST39/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2151) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST40/g13/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST40/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2153) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
-          Nr. of Inv Rising  Sync Pins  : 0
-          Nr. of     Falling Sync Pins  : 0
-          Nr. of Inv Falling Sync Pins  : 0
-          Nr. of Gated Clocks           : 0
-*DEPTH 1 Input_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST42/g13/A) Output_Pin: (CPU_REGS_regs_lo_RC_CG_HIER_INST42/g13/Q) Cell: (AND2X1) Net: (CPU_REGS_regs_lo_rc_gclk_2157) NO-INV
-          Nr. of Exclude Pins           : 0
-          Nr. of Unsync Pins            : 0
-          Nr. of Total Sync Pins        : 8
-          Nr. of     Rising  Sync Pins  : 8
           Nr. of Inv Rising  Sync Pins  : 0
           Nr. of     Falling Sync Pins  : 0
           Nr. of Inv Falling Sync Pins  : 0
@@ -392,10 +389,6 @@ AND2X1 (A)                              37
 
 ****** Pre CTS Detail Structure for clock CLK
 *DEPTH 0: CLK
- (Sync)RC_CG_HIER_INST1/enl_reg/GN
- (Sync)RC_CG_HIER_INST2/enl_reg/GN
- (Sync)RC_CG_HIER_INST3/enl_reg/GN
- (Sync)RC_CG_HIER_INST4/enl_reg/GN
  (Sync)CPU_REGS_RC_CG_HIER_INST10/enl_reg/GN
  (Sync)CPU_REGS_RC_CG_HIER_INST5/enl_reg/GN
  (Sync)CPU_REGS_RC_CG_HIER_INST6/enl_reg/GN
@@ -407,7 +400,6 @@ AND2X1 (A)                              37
  (Sync)CPU_REGS_regs_hi_RC_CG_HIER_INST13/enl_reg/GN
  (Sync)CPU_REGS_regs_hi_RC_CG_HIER_INST14/enl_reg/GN
  (Sync)CPU_REGS_regs_hi_RC_CG_HIER_INST15/enl_reg/GN
- (Sync)CPU_REGS_regs_hi_RC_CG_HIER_INST16/enl_reg/GN
  (Sync)CPU_REGS_regs_hi_RC_CG_HIER_INST17/enl_reg/GN
  (Sync)CPU_REGS_regs_hi_RC_CG_HIER_INST18/enl_reg/GN
  (Sync)CPU_REGS_regs_hi_RC_CG_HIER_INST19/enl_reg/GN
@@ -429,40 +421,12 @@ AND2X1 (A)                              37
  (Sync)CPU_REGS_regs_lo_RC_CG_HIER_INST39/enl_reg/GN
  (Sync)CPU_REGS_regs_lo_RC_CG_HIER_INST40/enl_reg/GN
  (Sync)CPU_REGS_regs_lo_RC_CG_HIER_INST42/enl_reg/GN
+ (Sync)RC_CG_HIER_INST1/enl_reg/GN
+ (Sync)RC_CG_HIER_INST2/enl_reg/GN
+ (Sync)RC_CG_HIER_INST3/enl_reg/GN
+ (Sync)RC_CG_HIER_INST4/enl_reg/GN
  (Sync)CPU_REGS_r_reg[7]/C
- *DEPTH 1: RC_CG_HIER_INST1/g12(A->Q)
-  (Sync)SINT_reg/C
-  (Sync)SNMI_reg/C
-  (Sync)SRESET_reg/C
-  (Sync)CPUStatus_reg[0]/C
-  (Sync)CPUStatus_reg[1]/C
-  (Sync)CPUStatus_reg[2]/C
-  (Sync)CPUStatus_reg[3]/C
-  (Sync)CPUStatus_reg[4]/C
-  (Sync)CPUStatus_reg[5]/C
-  (Sync)CPUStatus_reg[6]/C
-  (Sync)CPUStatus_reg[7]/C
-  (Sync)CPUStatus_reg[8]/C
-  (Sync)CPUStatus_reg[9]/C
-  (Sync)FNMI_reg/C
-  (Sync)STAGE_reg[0]/C
-  (Sync)STAGE_reg[1]/C
-  (Sync)STAGE_reg[2]/C
-  (Sync)tzf_reg/C
- *DEPTH 1: RC_CG_HIER_INST2/g12(A->Q)
-  (Sync)FETCH_reg[2]/C
-  (Sync)FETCH_reg[3]/C
-  (Sync)FETCH_reg[4]/C
-  (Sync)FETCH_reg[5]/C
- *DEPTH 1: RC_CG_HIER_INST3/g12(A->Q)
-  (Sync)FETCH_reg[0]/C
-  (Sync)FETCH_reg[1]/C
-  (Sync)FETCH_reg[6]/C
- *DEPTH 1: RC_CG_HIER_INST4/g12(A->Q)
-  (Sync)FETCH_reg[7]/C
-  (Sync)FETCH_reg[8]/C
-  (Sync)FETCH_reg[9]/C
- *DEPTH 1: CPU_REGS_RC_CG_HIER_INST10/g13(A->Q)
+ *DEPTH 1: CPU_REGS_RC_CG_HIER_INST10/g12(A->Q)
   (Sync)CPU_REGS_r_reg[0]/C
   (Sync)CPU_REGS_r_reg[1]/C
   (Sync)CPU_REGS_r_reg[2]/C
@@ -470,7 +434,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_r_reg[4]/C
   (Sync)CPU_REGS_r_reg[5]/C
   (Sync)CPU_REGS_r_reg[6]/C
- *DEPTH 1: CPU_REGS_RC_CG_HIER_INST5/g13(A->Q)
+ *DEPTH 1: CPU_REGS_RC_CG_HIER_INST5/g12(A->Q)
   (Sync)CPU_REGS_pc_reg[0]/C
   (Sync)CPU_REGS_pc_reg[10]/C
   (Sync)CPU_REGS_pc_reg[11]/C
@@ -487,7 +451,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_pc_reg[7]/C
   (Sync)CPU_REGS_pc_reg[8]/C
   (Sync)CPU_REGS_pc_reg[9]/C
- *DEPTH 1: CPU_REGS_RC_CG_HIER_INST6/g13(A->Q)
+ *DEPTH 1: CPU_REGS_RC_CG_HIER_INST6/g12(A->Q)
   (Sync)CPU_REGS_sp_reg[0]/C
   (Sync)CPU_REGS_sp_reg[10]/C
   (Sync)CPU_REGS_sp_reg[11]/C
@@ -504,16 +468,16 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_sp_reg[7]/C
   (Sync)CPU_REGS_sp_reg[8]/C
   (Sync)CPU_REGS_sp_reg[9]/C
- *DEPTH 1: CPU_REGS_RC_CG_HIER_INST7/g13(A->Q)
-  (Sync)CPU_REGS_flg_reg[0]/C
+ *DEPTH 1: CPU_REGS_RC_CG_HIER_INST7/g12(A->Q)
   (Sync)CPU_REGS_flg_reg[1]/C
   (Sync)CPU_REGS_flg_reg[2]/C
   (Sync)CPU_REGS_flg_reg[3]/C
   (Sync)CPU_REGS_flg_reg[4]/C
   (Sync)CPU_REGS_flg_reg[5]/C
+  (Sync)CPU_REGS_flg_reg[0]/C
   (Sync)CPU_REGS_flg_reg[6]/C
   (Sync)CPU_REGS_flg_reg[7]/C
- *DEPTH 1: CPU_REGS_RC_CG_HIER_INST8/g13(A->Q)
+ *DEPTH 1: CPU_REGS_RC_CG_HIER_INST8/g12(A->Q)
   (Sync)CPU_REGS_th_reg[0]/C
   (Sync)CPU_REGS_th_reg[1]/C
   (Sync)CPU_REGS_th_reg[2]/C
@@ -522,16 +486,16 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_th_reg[5]/C
   (Sync)CPU_REGS_th_reg[6]/C
   (Sync)CPU_REGS_th_reg[7]/C
- *DEPTH 1: CPU_REGS_RC_CG_HIER_INST9/g13(A->Q)
-  (Sync)CPU_REGS_flg_reg[10]/C
+ *DEPTH 1: CPU_REGS_RC_CG_HIER_INST9/g12(A->Q)
   (Sync)CPU_REGS_flg_reg[11]/C
   (Sync)CPU_REGS_flg_reg[12]/C
   (Sync)CPU_REGS_flg_reg[13]/C
+  (Sync)CPU_REGS_flg_reg[9]/C
+  (Sync)CPU_REGS_flg_reg[10]/C
   (Sync)CPU_REGS_flg_reg[14]/C
   (Sync)CPU_REGS_flg_reg[15]/C
   (Sync)CPU_REGS_flg_reg[8]/C
-  (Sync)CPU_REGS_flg_reg[9]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST11/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST11/g12(A->Q)
   (Sync)CPU_REGS_regs_hi_data_reg[0][0]/C
   (Sync)CPU_REGS_regs_hi_data_reg[0][1]/C
   (Sync)CPU_REGS_regs_hi_data_reg[0][2]/C
@@ -540,7 +504,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_hi_data_reg[0][5]/C
   (Sync)CPU_REGS_regs_hi_data_reg[0][6]/C
   (Sync)CPU_REGS_regs_hi_data_reg[0][7]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST12/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST12/g12(A->Q)
   (Sync)CPU_REGS_regs_hi_data_reg[10][0]/C
   (Sync)CPU_REGS_regs_hi_data_reg[10][1]/C
   (Sync)CPU_REGS_regs_hi_data_reg[10][2]/C
@@ -549,7 +513,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_hi_data_reg[10][5]/C
   (Sync)CPU_REGS_regs_hi_data_reg[10][6]/C
   (Sync)CPU_REGS_regs_hi_data_reg[10][7]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST13/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST13/g12(A->Q)
   (Sync)CPU_REGS_regs_hi_data_reg[12][0]/C
   (Sync)CPU_REGS_regs_hi_data_reg[12][1]/C
   (Sync)CPU_REGS_regs_hi_data_reg[12][2]/C
@@ -558,7 +522,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_hi_data_reg[12][5]/C
   (Sync)CPU_REGS_regs_hi_data_reg[12][6]/C
   (Sync)CPU_REGS_regs_hi_data_reg[12][7]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST14/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST14/g12(A->Q)
   (Sync)CPU_REGS_regs_hi_data_reg[2][0]/C
   (Sync)CPU_REGS_regs_hi_data_reg[2][1]/C
   (Sync)CPU_REGS_regs_hi_data_reg[2][2]/C
@@ -567,7 +531,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_hi_data_reg[2][5]/C
   (Sync)CPU_REGS_regs_hi_data_reg[2][6]/C
   (Sync)CPU_REGS_regs_hi_data_reg[2][7]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST15/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST15/g12(A->Q)
   (Sync)CPU_REGS_regs_hi_data_reg[3][0]/C
   (Sync)CPU_REGS_regs_hi_data_reg[3][1]/C
   (Sync)CPU_REGS_regs_hi_data_reg[3][2]/C
@@ -576,16 +540,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_hi_data_reg[3][5]/C
   (Sync)CPU_REGS_regs_hi_data_reg[3][6]/C
   (Sync)CPU_REGS_regs_hi_data_reg[3][7]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST16/g13(A->Q)
-  (Sync)CPU_REGS_regs_hi_data_reg[13][0]/C
-  (Sync)CPU_REGS_regs_hi_data_reg[13][1]/C
-  (Sync)CPU_REGS_regs_hi_data_reg[13][2]/C
-  (Sync)CPU_REGS_regs_hi_data_reg[13][3]/C
-  (Sync)CPU_REGS_regs_hi_data_reg[13][4]/C
-  (Sync)CPU_REGS_regs_hi_data_reg[13][5]/C
-  (Sync)CPU_REGS_regs_hi_data_reg[13][6]/C
-  (Sync)CPU_REGS_regs_hi_data_reg[13][7]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST17/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST17/g12(A->Q)
   (Sync)CPU_REGS_regs_hi_data_reg[4][0]/C
   (Sync)CPU_REGS_regs_hi_data_reg[4][1]/C
   (Sync)CPU_REGS_regs_hi_data_reg[4][2]/C
@@ -594,7 +549,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_hi_data_reg[4][5]/C
   (Sync)CPU_REGS_regs_hi_data_reg[4][6]/C
   (Sync)CPU_REGS_regs_hi_data_reg[4][7]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST18/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST18/g12(A->Q)
   (Sync)CPU_REGS_regs_hi_data_reg[5][0]/C
   (Sync)CPU_REGS_regs_hi_data_reg[5][1]/C
   (Sync)CPU_REGS_regs_hi_data_reg[5][2]/C
@@ -603,7 +558,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_hi_data_reg[5][5]/C
   (Sync)CPU_REGS_regs_hi_data_reg[5][6]/C
   (Sync)CPU_REGS_regs_hi_data_reg[5][7]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST19/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST19/g12(A->Q)
   (Sync)CPU_REGS_regs_hi_data_reg[6][0]/C
   (Sync)CPU_REGS_regs_hi_data_reg[6][1]/C
   (Sync)CPU_REGS_regs_hi_data_reg[6][2]/C
@@ -612,7 +567,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_hi_data_reg[6][5]/C
   (Sync)CPU_REGS_regs_hi_data_reg[6][6]/C
   (Sync)CPU_REGS_regs_hi_data_reg[6][7]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST20/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST20/g12(A->Q)
   (Sync)CPU_REGS_regs_hi_data_reg[11][0]/C
   (Sync)CPU_REGS_regs_hi_data_reg[11][1]/C
   (Sync)CPU_REGS_regs_hi_data_reg[11][2]/C
@@ -621,7 +576,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_hi_data_reg[11][5]/C
   (Sync)CPU_REGS_regs_hi_data_reg[11][6]/C
   (Sync)CPU_REGS_regs_hi_data_reg[11][7]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST22/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST22/g12(A->Q)
   (Sync)CPU_REGS_regs_hi_data_reg[7][0]/C
   (Sync)CPU_REGS_regs_hi_data_reg[7][1]/C
   (Sync)CPU_REGS_regs_hi_data_reg[7][2]/C
@@ -630,7 +585,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_hi_data_reg[7][5]/C
   (Sync)CPU_REGS_regs_hi_data_reg[7][6]/C
   (Sync)CPU_REGS_regs_hi_data_reg[7][7]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST23/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST23/g12(A->Q)
   (Sync)CPU_REGS_regs_hi_data_reg[8][0]/C
   (Sync)CPU_REGS_regs_hi_data_reg[8][1]/C
   (Sync)CPU_REGS_regs_hi_data_reg[8][2]/C
@@ -639,7 +594,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_hi_data_reg[8][5]/C
   (Sync)CPU_REGS_regs_hi_data_reg[8][6]/C
   (Sync)CPU_REGS_regs_hi_data_reg[8][7]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST24/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST24/g12(A->Q)
   (Sync)CPU_REGS_regs_hi_data_reg[9][0]/C
   (Sync)CPU_REGS_regs_hi_data_reg[9][1]/C
   (Sync)CPU_REGS_regs_hi_data_reg[9][2]/C
@@ -648,7 +603,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_hi_data_reg[9][5]/C
   (Sync)CPU_REGS_regs_hi_data_reg[9][6]/C
   (Sync)CPU_REGS_regs_hi_data_reg[9][7]/C
- *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST26/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_hi_RC_CG_HIER_INST26/g12(A->Q)
   (Sync)CPU_REGS_regs_hi_data_reg[1][0]/C
   (Sync)CPU_REGS_regs_hi_data_reg[1][1]/C
   (Sync)CPU_REGS_regs_hi_data_reg[1][2]/C
@@ -657,7 +612,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_hi_data_reg[1][5]/C
   (Sync)CPU_REGS_regs_hi_data_reg[1][6]/C
   (Sync)CPU_REGS_regs_hi_data_reg[1][7]/C
- *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST27/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST27/g12(A->Q)
   (Sync)CPU_REGS_regs_lo_data_reg[0][0]/C
   (Sync)CPU_REGS_regs_lo_data_reg[0][1]/C
   (Sync)CPU_REGS_regs_lo_data_reg[0][2]/C
@@ -666,7 +621,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_lo_data_reg[0][5]/C
   (Sync)CPU_REGS_regs_lo_data_reg[0][6]/C
   (Sync)CPU_REGS_regs_lo_data_reg[0][7]/C
- *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST28/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST28/g12(A->Q)
   (Sync)CPU_REGS_regs_lo_data_reg[10][0]/C
   (Sync)CPU_REGS_regs_lo_data_reg[10][1]/C
   (Sync)CPU_REGS_regs_lo_data_reg[10][2]/C
@@ -675,7 +630,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_lo_data_reg[10][5]/C
   (Sync)CPU_REGS_regs_lo_data_reg[10][6]/C
   (Sync)CPU_REGS_regs_lo_data_reg[10][7]/C
- *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST29/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST29/g12(A->Q)
   (Sync)CPU_REGS_regs_lo_data_reg[12][0]/C
   (Sync)CPU_REGS_regs_lo_data_reg[12][1]/C
   (Sync)CPU_REGS_regs_lo_data_reg[12][2]/C
@@ -684,7 +639,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_lo_data_reg[12][5]/C
   (Sync)CPU_REGS_regs_lo_data_reg[12][6]/C
   (Sync)CPU_REGS_regs_lo_data_reg[12][7]/C
- *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST30/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST30/g12(A->Q)
   (Sync)CPU_REGS_regs_lo_data_reg[2][0]/C
   (Sync)CPU_REGS_regs_lo_data_reg[2][1]/C
   (Sync)CPU_REGS_regs_lo_data_reg[2][2]/C
@@ -693,7 +648,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_lo_data_reg[2][5]/C
   (Sync)CPU_REGS_regs_lo_data_reg[2][6]/C
   (Sync)CPU_REGS_regs_lo_data_reg[2][7]/C
- *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST31/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST31/g12(A->Q)
   (Sync)CPU_REGS_regs_lo_data_reg[3][0]/C
   (Sync)CPU_REGS_regs_lo_data_reg[3][1]/C
   (Sync)CPU_REGS_regs_lo_data_reg[3][2]/C
@@ -702,7 +657,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_lo_data_reg[3][5]/C
   (Sync)CPU_REGS_regs_lo_data_reg[3][6]/C
   (Sync)CPU_REGS_regs_lo_data_reg[3][7]/C
- *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST33/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST33/g12(A->Q)
   (Sync)CPU_REGS_regs_lo_data_reg[4][0]/C
   (Sync)CPU_REGS_regs_lo_data_reg[4][1]/C
   (Sync)CPU_REGS_regs_lo_data_reg[4][2]/C
@@ -711,7 +666,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_lo_data_reg[4][5]/C
   (Sync)CPU_REGS_regs_lo_data_reg[4][6]/C
   (Sync)CPU_REGS_regs_lo_data_reg[4][7]/C
- *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST34/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST34/g12(A->Q)
   (Sync)CPU_REGS_regs_lo_data_reg[5][0]/C
   (Sync)CPU_REGS_regs_lo_data_reg[5][1]/C
   (Sync)CPU_REGS_regs_lo_data_reg[5][2]/C
@@ -720,7 +675,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_lo_data_reg[5][5]/C
   (Sync)CPU_REGS_regs_lo_data_reg[5][6]/C
   (Sync)CPU_REGS_regs_lo_data_reg[5][7]/C
- *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST35/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST35/g12(A->Q)
   (Sync)CPU_REGS_regs_lo_data_reg[6][0]/C
   (Sync)CPU_REGS_regs_lo_data_reg[6][1]/C
   (Sync)CPU_REGS_regs_lo_data_reg[6][2]/C
@@ -729,7 +684,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_lo_data_reg[6][5]/C
   (Sync)CPU_REGS_regs_lo_data_reg[6][6]/C
   (Sync)CPU_REGS_regs_lo_data_reg[6][7]/C
- *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST36/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST36/g12(A->Q)
   (Sync)CPU_REGS_regs_lo_data_reg[11][0]/C
   (Sync)CPU_REGS_regs_lo_data_reg[11][1]/C
   (Sync)CPU_REGS_regs_lo_data_reg[11][2]/C
@@ -738,7 +693,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_lo_data_reg[11][5]/C
   (Sync)CPU_REGS_regs_lo_data_reg[11][6]/C
   (Sync)CPU_REGS_regs_lo_data_reg[11][7]/C
- *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST38/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST38/g12(A->Q)
   (Sync)CPU_REGS_regs_lo_data_reg[7][0]/C
   (Sync)CPU_REGS_regs_lo_data_reg[7][1]/C
   (Sync)CPU_REGS_regs_lo_data_reg[7][2]/C
@@ -747,7 +702,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_lo_data_reg[7][5]/C
   (Sync)CPU_REGS_regs_lo_data_reg[7][6]/C
   (Sync)CPU_REGS_regs_lo_data_reg[7][7]/C
- *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST39/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST39/g12(A->Q)
   (Sync)CPU_REGS_regs_lo_data_reg[8][0]/C
   (Sync)CPU_REGS_regs_lo_data_reg[8][1]/C
   (Sync)CPU_REGS_regs_lo_data_reg[8][2]/C
@@ -756,7 +711,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_lo_data_reg[8][5]/C
   (Sync)CPU_REGS_regs_lo_data_reg[8][6]/C
   (Sync)CPU_REGS_regs_lo_data_reg[8][7]/C
- *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST40/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST40/g12(A->Q)
   (Sync)CPU_REGS_regs_lo_data_reg[9][0]/C
   (Sync)CPU_REGS_regs_lo_data_reg[9][1]/C
   (Sync)CPU_REGS_regs_lo_data_reg[9][2]/C
@@ -765,7 +720,7 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_lo_data_reg[9][5]/C
   (Sync)CPU_REGS_regs_lo_data_reg[9][6]/C
   (Sync)CPU_REGS_regs_lo_data_reg[9][7]/C
- *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST42/g13(A->Q)
+ *DEPTH 1: CPU_REGS_regs_lo_RC_CG_HIER_INST42/g12(A->Q)
   (Sync)CPU_REGS_regs_lo_data_reg[1][0]/C
   (Sync)CPU_REGS_regs_lo_data_reg[1][1]/C
   (Sync)CPU_REGS_regs_lo_data_reg[1][2]/C
@@ -774,3 +729,35 @@ AND2X1 (A)                              37
   (Sync)CPU_REGS_regs_lo_data_reg[1][5]/C
   (Sync)CPU_REGS_regs_lo_data_reg[1][6]/C
   (Sync)CPU_REGS_regs_lo_data_reg[1][7]/C
+ *DEPTH 1: RC_CG_HIER_INST1/g12(A->Q)
+  (Sync)SINT_reg/C
+  (Sync)SNMI_reg/C
+  (Sync)SRESET_reg/C
+  (Sync)CPUStatus_reg[0]/C
+  (Sync)CPUStatus_reg[4]/C
+  (Sync)CPUStatus_reg[5]/C
+  (Sync)CPUStatus_reg[8]/C
+  (Sync)CPUStatus_reg[9]/C
+  (Sync)STAGE_reg[2]/C
+  (Sync)CPUStatus_reg[1]/C
+  (Sync)CPUStatus_reg[2]/C
+  (Sync)CPUStatus_reg[3]/C
+  (Sync)CPUStatus_reg[6]/C
+  (Sync)CPUStatus_reg[7]/C
+  (Sync)FNMI_reg/C
+  (Sync)STAGE_reg[0]/C
+  (Sync)STAGE_reg[1]/C
+  (Sync)tzf_reg/C
+ *DEPTH 1: RC_CG_HIER_INST2/g12(A->Q)
+  (Sync)FETCH_reg[2]/C
+  (Sync)FETCH_reg[4]/C
+  (Sync)FETCH_reg[5]/C
+  (Sync)FETCH_reg[3]/C
+ *DEPTH 1: RC_CG_HIER_INST3/g12(A->Q)
+  (Sync)FETCH_reg[0]/C
+  (Sync)FETCH_reg[1]/C
+  (Sync)FETCH_reg[6]/C
+ *DEPTH 1: RC_CG_HIER_INST4/g12(A->Q)
+  (Sync)FETCH_reg[7]/C
+  (Sync)FETCH_reg[8]/C
+  (Sync)FETCH_reg[9]/C

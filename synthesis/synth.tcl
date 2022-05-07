@@ -74,11 +74,13 @@ check_design -unresolved
 
 synthesize -to_generic -eff high
 synthesize -to_mapped -eff high  -no_incr
+set_db / .syn_opt_effort high
+#syn_opt -incremental
 
-report area   > report/${DESIGN}_area.rep
-report timing > report/${DESIGN}_timing.rep
-report gates  > report/${DESIGN}_gates.rep
-report power  > report/${DESIGN}_power.rep
+report area   > reports/${DESIGN}_area.rep
+report timing > reports/${DESIGN}_timing.rep
+report gates  > reports/${DESIGN}_gates.rep
+report power  > reports/${DESIGN}_power.rep
 
 #set_db common_ui false
 #write_design -encounter -base_name layout/${DESIGN}

@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Thu Apr  7 14:10:44 2022                
+#  Created on Sat May  7 15:40:43 2022                
 #                                                     
 #######################################################
 
@@ -65,7 +65,7 @@ set_db flow_metrics_file {}
 is_attribute flow_metrics_snapshot_parent_uuid -obj_type root
 set_db flow_metrics_snapshot_parent_uuid {}
 is_attribute flow_metrics_snapshot_uuid -obj_type root
-set_db flow_metrics_snapshot_uuid 3b3bc4b5
+set_db flow_metrics_snapshot_uuid 3b70c04b
 is_attribute flow_overwrite_database -obj_type root
 set_db flow_overwrite_database false
 is_attribute flow_report_directory -obj_type root
@@ -94,11 +94,11 @@ is_attribute flow_step_next -obj_type root
 set_db flow_step_next {}
 is_attribute flow_working_directory -obj_type root
 set_db flow_working_directory .
-read_mmmc innovus/busca_padrao.mmmc.tcl
+read_mmmc innovus/NextZ80.mmmc.tcl
 read_physical -lef {/pdk/xfab/XC018_61_3.1.3/cadence/xc018/LEF/xc018_m6_FE/xc018m6_FE.lef /pdk/xfab/XC018_61_3.1.3/cadence/xc018/LEF/xc018_m6_FE/D_CELLS.lef /pdk/xfab/XC018_61_3.1.3/cadence/xc018/LEF/xc018_m6_FE/IO_CELLS_5V.lef}
-read_netlist innovus/busca_padrao.v
+read_netlist innovus/NextZ80.v
 init_design
-read_metric -id current innovus/busca_padrao.metrics.json
+read_metric -id current innovus/NextZ80.metrics.json
 set_db timing_apply_default_primary_input_assertion false
 set_db timing_clock_phase_propagation both
 set_db opt_power_effort low
@@ -106,9 +106,16 @@ set_db timing_analysis_async_checks no_async
 set_db extract_rc_layer_independent 1
 set_db place_global_reorder_scan false
 set_db extract_rc_engine pre_route
-set_db opt_keep_ports innovus/busca_padrao.boundary_opto.tcl
-create_floorplan -site core -core_density_size 1 0.8 3 3 3 3
+set_db opt_keep_ports innovus/NextZ80.boundary_opto.tcl
 read_io_file iopads.io
+create_floorplan -site core -core_density_size 1 0.7 3 3 3 3
 gui_fit
-zoom_in
-gui_pan_page -1 0
+delete_global_net_connections
+connect_global_net vdd -type pg_pin -pin_base_name VDD -inst_base_name *
+connect_global_net gnd -type pg_pin -pin_base_name GNDOR -inst_base_name *
+connect_global_net vdd -type tie_hi -inst_base_name *
+connect_global_net gnd -type tie_lo -inst_base_name *
+eval_legacy { addRing -skip_via_on_wire_shape Noshape -skip_via_on_pin Standardcell -stacked_via_top_layer METTP -type core_rings -jog_distance 0.315 -threshold 0.315 -nets {vdd gnd} -follow core -stacked_via_bottom_layer MET1 -layer {bottom MET1 top MET1 right MET2 left MET2} -width 0.44 -spacing 0.46 -offset 0.315 }
+route_special -connect {block_pin core_pin pad_pin pad_ring floating_stripe} -layer_change_range {MET1 METTP} -block_pin_target nearest_target -pad_pin_port_connect {all_port one_geom} -block_pin use_lef -allow_jogging 1 -crossover_via_layer_range {MET1 METTP} -allow_layer_change 1 -target_via_layer_range {MET1 METTP} -nets {gnd vdd}
+place_design
+opt_design -pre_cts
